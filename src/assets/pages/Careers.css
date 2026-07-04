@@ -1,0 +1,21 @@
+.careers-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.careers-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(15, 38, 95, 0.12);
+}
+
+.careers-card .card-title {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.careers-card ul {
+  margin-bottom: 0;
+}
+
+.careers-card ul li {
+  margin-bottom: 0.5rem;
+}

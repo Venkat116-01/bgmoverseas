@@ -1,0 +1,67 @@
+nav.navbar {
+  padding: 0.8rem 1.5rem;
+  background-color: linear-gradient(135deg, #08183f 0%, #0b2d72 100%);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+ box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.navbar-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-right: 0.75rem;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-nav {
+  gap: 1rem;
+  margin-left: auto;
+  align-items: center;
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.7rem 0.9rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffd54f !important;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 0.35rem;
+}
+
+.dropdown-menu {
+  min-width: 220px;
+}
+
+.dropdown-item {
+  padding: 0.7rem 1.2rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #0d6efd;
+  color: #fff;
+}
+.navbar-link,
+.navbar-brand,
+.nav-link {
+  color: #fff;
+}

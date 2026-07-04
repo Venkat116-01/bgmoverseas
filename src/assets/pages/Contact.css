@@ -1,0 +1,113 @@
+.contact-page {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f5fbff 0%, #ecf4ff 55%, #ffffff 100%);
+}
+
+.contact-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(242, 180, 25, 0.22), transparent 24%),
+              radial-gradient(circle at 80% 15%, rgba(2, 56, 132, 0.16), transparent 20%);
+  pointer-events: none;
+  animation: contact-glow 14s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes contact-glow {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(-12px) scale(1.04);
+    opacity: 0.82;
+  }
+}
+
+.contact-page .container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-page .text-primary {
+  color: #0b2d72;
+}
+
+.contact-card {
+  background: linear-gradient(180deg, #ffffff 0%, #eef5ff 100%);
+  border-radius: 1.8rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 65px rgba(15, 38, 95, 0.16);
+  background: linear-gradient(135deg, #f2b419 0%, #08183f 100%);
+  color: #fff;
+}
+
+.contact-card:hover .card-title,
+.contact-card:hover p,
+.contact-card:hover li,
+.contact-card:hover label {
+  color: #fff;
+}
+
+.contact-card-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f2b419 0%, #ff8b4b 100%);
+  color: #08183f;
+  font-size: 1.2rem;
+  box-shadow: 0 14px 30px rgba(242, 180, 25, 0.24);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.05);
+  box-shadow: 0 18px 32px rgba(255, 143, 71, 0.35);
+}
+
+.contact-btn {
+  border-radius: 1rem;
+  padding: 0.95rem 1.9rem;
+  background: linear-gradient(135deg, #f2b419 0%, #ff8a45 100%);
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 35px rgba(242, 124, 25, 0.35);
+  background: linear-gradient(135deg, #ffb14c 0%, #08183f 100%);
+  color: #fff;
+}
+
+.form-control:focus {
+  border-color: #f2b419;
+  box-shadow: 0 0 0 0.2rem rgba(242, 180, 25, 0.18);
+}
+
+.alert-info {
+  background: rgba(242, 180, 25, 0.12);
+  border-color: rgba(242, 180, 25, 0.22);
+  color: #0b2d72;
+}
+
+.is-invalid {
+  border-color: #dc3545;
+}
