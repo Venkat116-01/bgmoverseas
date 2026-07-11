@@ -1,4 +1,4 @@
-nav.navbar {
+/* nav.navbar {
   padding: 0.8rem 1.5rem;
   background-color: linear-gradient(135deg, #08183f 0%, #0b2d72 100%);
   position: sticky;
@@ -64,4 +64,281 @@ nav.navbar {
 .navbar-brand,
 .nav-link {
   color: #fff;
+}
+
+ */
+
+
+
+ /* ===================================
+   BGM OVERSEAS NAVBAR
+=================================== */
+
+
+.custom-navbar {
+
+  background: linear-gradient(
+    90deg,
+    #004aad,
+    #007bff
+  );
+
+  padding:12px 0;
+
+  position:sticky;
+
+  top:0;
+
+  z-index:999;
+
+}
+
+
+/* ===============================
+   LOGO + COMPANY NAME
+================================ */
+
+
+.navbar-brand {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  color:white !important;
+
+  font-size:22px;
+
+  font-weight:700;
+
+  transition:.3s;
+
+}
+
+
+.navbar-logo {
+
+  width:65px;
+
+  height:65px;
+
+  object-fit:contain;
+
+  background:white;
+
+  border-radius:50%;
+
+  padding:5px;
+
+  transition:.4s;
+
+}
+
+
+.navbar-brand:hover .navbar-logo {
+
+  transform:rotate(360deg);
+
+}
+
+
+.navbar-brand:hover {
+
+  color:#ffd54f !important;
+
+}
+
+
+
+/* ===============================
+   NAV MENU
+================================ */
+
+
+.navbar-nav {
+
+  align-items:center;
+
+}
+
+
+.navbar-nav .nav-link {
+
+
+  color:white !important;
+
+  font-size:16px;
+
+  font-weight:600;
+
+  padding:10px 18px !important;
+
+  margin:0 3px;
+
+  border-radius:30px;
+
+  position:relative;
+
+  transition:.3s;
+
+
+}
+
+
+
+.navbar-nav .nav-link:hover {
+
+
+  color:#ffd54f !important;
+
+  background:rgba(255,255,255,.12);
+
+  transform:translateY(-3px);
+
+
+}
+
+
+
+/* Active page */
+
+
+.navbar-nav .nav-link.active {
+
+
+ background:white;
+
+ color:#004aad !important;
+
+
+}
+
+
+
+/* ===============================
+ DROPDOWN
+================================ */
+
+
+.dropdown-menu {
+
+
+ border:none;
+
+ border-radius:15px;
+
+ padding:10px;
+
+ margin-top:15px;
+
+ box-shadow:
+
+ 0 15px 35px rgba(0,0,0,.15);
+
+
+}
+
+
+
+.dropdown-item {
+
+
+ padding:12px 20px;
+
+ border-radius:10px;
+
+ font-weight:500;
+
+ transition:.3s;
+
+
+}
+
+
+
+.dropdown-item:hover {
+
+
+ background:#004aad;
+
+ color:white;
+
+ transform:translateX(8px);
+
+
+}
+
+
+
+/* ===============================
+ MOBILE
+================================ */
+
+
+.navbar-toggler {
+
+
+ border:none;
+
+}
+
+
+
+.navbar-toggler:focus {
+
+
+ box-shadow:none;
+
+
+}
+
+
+
+@media(max-width:992px){
+
+
+.navbar-nav {
+
+
+ margin-top:20px;
+
+ align-items:flex-start;
+
+
+}
+
+
+.navbar-nav .nav-link {
+
+
+ width:100%;
+
+
+}
+
+
+
+.navbar-logo {
+
+
+ width:55px;
+
+ height:55px;
+
+
+}
+
+
+
+.navbar-brand span {
+
+
+ font-size:17px;
+
+
+}
+
+
 }

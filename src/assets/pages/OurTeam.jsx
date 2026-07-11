@@ -1,4 +1,7 @@
 import "./OurTeam.css";
+import "./PagesHero.css";
+import { Link } from "react-router-dom";
+import whyBgmBg from "../images/why-bgm-bg.jpg";
 
 function OurTeam() {
   const teamMembers = [
@@ -29,39 +32,61 @@ function OurTeam() {
   ];
 
   return (
-    <section className="our-team-page py-5">
-      <div className="container">
-        <div className="section-header text-center mb-5">
-          <p className="text-primary mb-2 fw-semibold">— Our Team</p>
-          <h1 className="display-5 fw-bold">
-            Meet the Experts Behind Your Global Education Journey
-          </h1>
-          <p className="lead text-muted mx-auto" style={{ maxWidth: 720 }}>
-            Our team combines admission expertise, visa support, scholarship guidance,
-            and career coaching so you get personalised support from the first step
-            through arrival abroad.
-          </p>
+    <>
+      <section className="page-hero"
+        style={{
+          backgroundImage: `url(${whyBgmBg})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="container justify-content-center text-center py-4">
+          <h1 className="page-hero-title">Our Team</h1>
+          <nav aria-label="breadcrumb" style={{ ['--bs-breadcrumb-divider']: " '>' " }}>
+            <ol className="breadcrumb justify-content-center">
+              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+              <li className="breadcrumb-item"><Link to="/our-team">Our Team</Link></li>
+              <li className="breadcrumb-item active" aria-current="page">Our Team</li>
+            </ol>
+          </nav>
         </div>
+      </section>
 
-        <div className="row gy-4">
-          {teamMembers.map((member) => (
-            <div className="col-md-6 col-xl-3" key={member.name}>
-              <div className="team-card card h-100 shadow-sm">
-                <div className="card-body">
-                  <div className="team-badge">★</div>
-                  <h3 className="team-name">{member.name}</h3>
-                  <p className="team-role">{member.role}</p>
-                  <p className="team-bio">{member.description}</p>
-                  <p className="team-focus">
-                    <strong>Focus:</strong> {member.focus}
-                  </p>
+      <section className="our-team-page py-4">
+        <div className="container">
+          <div className="section-header text-center mb-4">
+            <p className="text-primary mb-2 fw-semibold">— Our Team</p>
+            <h2 className="display-5 fw-bold">
+              Meet the Experts Behind Your Global Education Journey
+            </h2>
+            <p className="lead text-muted mx-auto" style={{ maxWidth: 720 }}>
+              Our team combines admission expertise, visa support, scholarship guidance,
+              and career coaching so you get personalised support from the first step
+              through arrival abroad.
+            </p>
+          </div>
+
+          <div className="row gy-4">
+            {teamMembers.map((member) => (
+              <div className="col-md-6 col-xl-3" key={member.name}>
+                <div className="team-card card h-100 shadow-sm">
+                  <div className="card-body">
+                    <div className="team-badge">★</div>
+                    <h3 className="team-name">{member.name}</h3>
+                    <p className="team-role">{member.role}</p>
+                    <p className="team-bio">{member.description}</p>
+                    <p className="team-focus">
+                      <strong>Focus:</strong> {member.focus}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 

@@ -25,9 +25,9 @@ function Footer() {
           <div className="col-md-4">
             <h5>Contact</h5>
             <ul className="footer-contacts list-unstyled">
-              <li>Phone: +91 98765 43210</li>
-              <li>Email: info@bgmoverseas.com</li>
-              <li>Address: 123 Student Plaza, Mumbai, India</li>
+              <li>Phone: +91 94909 96326</li>
+              <li>Email: bgmoverseasconsultancy@gmail.com</li>
+              <li>Address: Hyderbad, India</li>
             </ul>
           </div>
         </div>

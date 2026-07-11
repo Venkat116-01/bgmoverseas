@@ -947,3 +947,37 @@
   background: rgba(7, 13, 37, 0.62);
   transform: scale(1.03);
 }
+
+/* contact section */
+/* ensure cards stretch to same height and content spacing matches screenshot */
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.contact-card .card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* keep the intro area top-aligned and the CTA centered vertically */
+.contact-info-card .contact-card-top {
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-action-card .card-body {
+  justify-content: center; /* centers CTA block vertically */
+}
+
+/* optional: force a minimum height so layout looks like screenshot on small screens */
+@media (min-width: 992px) {
+  .contact-card {
+    min-height: 300px;
+  }
+}

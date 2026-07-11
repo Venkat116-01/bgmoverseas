@@ -5,14 +5,23 @@ import { Link } from "react-router-dom";
 // import img3 from "../../images/hero3.jpg";
 import homeImage1 from "../images/home1.jpg";
 import homeImage2 from "../images/home2.jpg";
-import homeImage3 from "../images/home3.jpg";
+// import homeImage3 from "../images/home3.jpg";
+import new4 from "../images/new4.png";
 import img1 from "../images/image1.jpg";
 import img2 from "../images/image2.jpg";
 import img3 from "../images/image3.jpg";
+import img4 from "../images/image4.jpg";
+import new5 from "../images/new5.png";
+import new6 from "../images/new6.png";
+import newImg1 from "../images/new1.jpg";
+import newImg2 from "../images/new2.jpg";
+import newImg3 from "../images/new3.png";
+import studyinuk01 from "../images/studyinuk2.png";
 import "./Home.css";
 
 
 function Home() {
+
   return (
     <>
     {/* Hero Carousel */}
@@ -80,7 +89,7 @@ function Home() {
   <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
     <div className="carousel-inner">
       <div className="carousel-item active">
-        <img src={homeImage1} className="d-block w-100" alt="Slide 1" />
+        <img src={new6} className="d-block w-100" alt="Slide 1" />
         <div className="carousel-caption carousel-caption-left">
           <div className="hero-caption-card">
             <p className="caption-subtitle">Ready to Unlock Global Opportunities?</p>
@@ -96,7 +105,7 @@ function Home() {
       </div>
 
       <div className="carousel-item">
-        <img src={homeImage2} className="d-block w-100" alt="Slide 2" />
+        <img src={new5} className="d-block w-100" alt="Slide 2" />
         <div className="carousel-caption carousel-caption-left">
           <div className="hero-caption-card">
             <p className="caption-subtitle">Learn from Expert Counselors</p>
@@ -112,7 +121,7 @@ function Home() {
       </div>
 
       <div className="carousel-item">
-        <img src={homeImage3} className="d-block w-100" alt="Slide 3" />
+        <img src={new4} className="d-block w-100" alt="Slide 3" />
         <div className="carousel-caption carousel-caption-left">
           <div className="hero-caption-card">
             <p className="caption-subtitle">Start Your Journey Today</p>
@@ -194,15 +203,17 @@ function Home() {
     <div className="row align-items-center gy-4">
       <div className="col-lg-6">
         <p className="text-primary mb-2 fw-semibold">— About Us</p>
-        <h1 className="display-5 fw-bold">
+        <h2 className="display-6 fw-bold">
           Your Gateway to Global Education, Career, and IT Solutions
-        </h1>
-        <p className="lead text-muted mt-4">
-          At BGM Overseas, we help students and professionals move abroad with confidence.
-          From university placement to visa guidance, scholarship support and career coaching,
-          our team delivers personalized support through every step.
+        </h2>
+        <p>
+        At BGM Overseas, we help students achieve their global education goals.
+        From choosing the right university and course to visa assistance and pre-departure support, our expert counselors provide personalized guidance at every stage of your study abroad journey.
         </p>
-
+        <p>Build your international career with BGM Overseas.
+           We connect skilled professionals with rewarding job opportunities across leading countries, offering end-to-end support including career guidance, documentation, visa assistance, and relocation services.</p>
+        <p>Our IT and healthcare solutions empower businesses to thrive in a competitive global market.
+           We provide innovative technology services, healthcare staffing, and consulting solutions tailored to meet the unique needs of our clients worldwide.</p>
         <div className="row gx-3 gy-3 mt-4">
           <div className="col-sm-6">
             <div className="about-highlight p-4 rounded-4 shadow-sm">
@@ -234,7 +245,7 @@ function Home() {
       <div className="col-lg-6">
         <div className="about-image-grid hero-images-grid-two-by-two">
           <div className="hero-card overflow-hidden rounded-4 shadow-sm">
-            <img src={img1} alt="Study" className="img-fluid" />
+            <img src={img4} alt="Study" className="img-fluid" />
           </div>
           <div className="hero-card overflow-hidden rounded-4 shadow-sm">
             <img src={img2} alt="Global" className="img-fluid" />
@@ -259,20 +270,24 @@ function Home() {
                 <span className="label-icon">🌍</span>
                 <span>Why BGM Overseas?</span>
               </div>
-              <h2 className="display-5 fw-bold">
-                Trusted Expertise, Global Reach, and Tailored Solutions for Your Success
+              <h2 className="display-6 fw-bold">
+                Empowering Your Global Journey Through Trusted Guidance, Innovative Solutions, and Opportunities Without Borders
               </h2>
-              <p className="lead text-muted mt-4">
-                At BGM Overseas, we don’t just guide you; we empower you to achieve your global ambitions with confidence and clarity.
-                Let us be your trusted partner in shaping a brighter, more successful future.
+              <p>
+                At BGM Overseas, we believe that every dream deserves the right guidance and every ambition deserves the opportunity to succeed. We are committed to helping students pursue quality education at leading international universities, supporting professionals in securing rewarding overseas career opportunities, and providing innovative IT solutions to meet the evolving needs of businesses worldwide.
               </p>
+              <p>
+                At BGM Overseas, we don't just open doors to global opportunities—we help you build a future filled with success, growth, and endless possibilities. Let us be your trusted partner in turning your dreams into reality and creating a brighter future beyond borders.
+              </p>
+
+
 
               <div className="row gx-4 gy-4 mt-5">
                 <div className="col-sm-6">
                   <div className="feature-card p-4 rounded-4">
                     <div className="feature-icon">🤝</div>
                     <h5>Expert Guidance</h5>
-                    <p className="text-muted">
+                    <p>
                       Our team of certified consultants offers in-depth knowledge and expertise, ensuring you make informed decisions.
                     </p>
                   </div>
@@ -281,8 +296,8 @@ function Home() {
                   <div className="feature-card p-4 rounded-4">
                     <div className="feature-icon">🌐</div>
                     <h5>Global Reach</h5>
-                    <p className="text-muted">
-                      From Canada to Australia, Malta to Singapore, we open doors to the world’s leading educational institutions and job markets.
+                    <p>
+                      From USA to Australia, we open doors to the world’s leading educational institutions and job markets.
                     </p>
                   </div>
                 </div>
@@ -308,8 +323,8 @@ function Home() {
         <div className="container home-cta-content">
           <div className="row align-items-center">
             <div className="col-lg-7">
-              <h1>Connect with Us for Expert Guidance and Support!</h1>
-              <p className="lead">
+              <h2>Connect with Us for Expert Guidance and Support!</h2>
+              <p>
                 Whether you have questions about studying abroad, working internationally,
                 or our IT and healthcare solutions, our dedicated team is here to help.
                 Reach out today, and let’s start your journey together!
@@ -329,7 +344,7 @@ function Home() {
       <div className="card-body">
         <p className="text-primary mb-2 fw-semibold">— Our Team</p>
         <h2 className="display-5 fw-bold">Meet the Experts Behind BGM Overseas</h2>
-        <p className="lead text-muted">
+        <p>
           Our counselors and advisors bring real admissions, visa and scholarship expertise to every student journey.
         </p>
       </div>
@@ -340,7 +355,7 @@ function Home() {
         {
           name: "Aman Sharma",
           role: "Founder & CEO",
-          description: "Overseas education expert with 10+ years of experience.",
+          description: "Overseas education expert with 5+ years of experience.",
         },
         {
           name: "Priya Patel",
@@ -372,7 +387,7 @@ function Home() {
   <div className="text-center mb-5">
     <p className="text-primary mb-2 fw-semibold">— Careers</p>
     <h2 className="display-5 fw-bold">Grow Your Career with BGM Overseas</h2>
-    <p className="lead text-muted">
+    <p>
       Join our student-focused team and help build successful overseas journeys.
     </p>
   </div>
@@ -415,7 +430,7 @@ function Home() {
         <div className="card-body">
           <h3 className="card-title">Apply Now</h3>
           <p className="card-text">
-            Send your resume and cover letter to careers@bgmoverseas.com or visit our contact page.
+            Send your resume and cover letter to bgmoverseasconsultancy@gmail.com or visit our contact page.
           </p>
           <Link to="/contact" className="btn btn-primary mt-3">
             Contact Us
@@ -431,13 +446,13 @@ function Home() {
     <div className="contact-intro text-center mb-5">
       <p className="text-primary mb-2 fw-semibold">— Contact</p>
       <h2 className="display-5 fw-bold">Let’s Talk About Your Overseas Plans</h2>
-      <p className="lead text-muted mx-auto" style={{ maxWidth: 720 }}>
+      <p className="mx-auto" style={{ maxWidth: 720 }}>
         We’re here to support your admissions, visa, and scholarship journey every
         step of the way. Connect with our team for personalised overseas guidance.
       </p>
     </div>
 
-    <div className="row g-4 align-items-center">
+    <div className="row g-4 align-items-stretch">
       <div className="col-lg-6">
         <div className="contact-card contact-info-card h-100 shadow-sm border-0">
           <div className="card-body">
@@ -454,13 +469,13 @@ function Home() {
 
             <ul className="contact-list list-unstyled mt-4">
               <li>
-                <strong>Phone:</strong> +91 98765 43210
+                <strong>Phone:</strong> +91 94909 96326
               </li>
               <li>
-                <strong>Email:</strong> info@bgmoverseas.com
+                <strong>Email:</strong> bgmoverseasconsultancy@gmail.com
               </li>
               <li>
-                <strong>Address:</strong> 123 Student Plaza, Mumbai, India
+                <strong>Address:</strong> Hyderbad, India
               </li>
             </ul>
           </div>

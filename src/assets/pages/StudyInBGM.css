@@ -1,0 +1,747 @@
+/* =========================================
+   STUDY PAGES COMMON CSS
+   BGM Overseas
+========================================= */
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+section.container {
+  max-width: 1180px;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.page-hero {
+  position: relative;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  animation: heroZoom 12s infinite alternate;
+}
+
+
+@keyframes heroZoom {
+
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+
+}
+
+
+.page-hero::before {
+
+  content: "";
+
+  position: absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.45)
+  );
+
+}
+
+
+
+.page-hero .container {
+
+  position:relative;
+  z-index:2;
+
+  animation: fadeDown 1s ease;
+
+}
+
+
+
+@keyframes fadeDown {
+
+from {
+
+ opacity:0;
+ transform:translateY(-40px);
+
+}
+
+to {
+
+ opacity:1;
+ transform:translateY(0);
+
+}
+
+}
+
+
+
+
+.page-hero-title {
+
+ color:white;
+
+ font-size:52px;
+
+ font-weight:800;
+
+ letter-spacing:1px;
+
+ text-transform:capitalize;
+
+ animation:titleAnimation 1.2s ease;
+
+}
+
+
+
+@keyframes titleAnimation {
+
+from{
+
+ opacity:0;
+ transform:translateY(50px);
+
+}
+
+to{
+
+ opacity:1;
+ transform:translateY(0);
+
+}
+
+}
+
+
+
+
+/* =========================
+   BREADCRUMB
+========================= */
+
+
+.breadcrumb {
+
+ margin-top:20px;
+
+ animation:fadeIn 1.5s ease;
+
+}
+
+
+@keyframes fadeIn {
+
+from{
+opacity:0;
+}
+
+to{
+opacity:1;
+}
+
+}
+
+
+.breadcrumb-item a {
+
+ color:white;
+
+ text-decoration:none;
+
+ font-weight:500;
+
+ transition:.3s;
+
+}
+
+
+
+.breadcrumb-item a:hover {
+
+ color:#ffd54f;
+
+}
+
+
+
+.breadcrumb-item.active {
+
+ color:#ffd54f;
+
+ font-weight:600;
+
+}
+
+
+
+
+/* =========================
+   CONTENT AREA
+========================= */
+
+
+.study-section-title {
+
+ color:#0d6efd;
+
+ font-size:38px;
+
+ font-weight:800;
+
+ margin-bottom:30px;
+
+ position:relative;
+
+}
+
+
+
+.study-section-title::after {
+
+ content:"";
+
+ width:70px;
+
+ height:4px;
+
+ background:#0d6efd;
+
+ position:absolute;
+
+ bottom:-12px;
+
+ left:0;
+
+ border-radius:10px;
+
+}
+
+
+
+
+section.container p {
+
+ color:#555;
+
+ font-size:17px;
+
+ line-height:1.9;
+
+}
+
+
+
+/* =========================
+   CONTENT CARDS
+========================= */
+
+
+.mb-5 {
+
+ background:white;
+
+ padding:35px;
+
+ border-radius:18px;
+
+ box-shadow:
+ 0 10px 30px rgba(0,0,0,.08);
+
+ margin-bottom:35px !important;
+
+ transition:.4s;
+
+ animation:cardAnimation .8s ease;
+
+}
+
+
+
+
+@keyframes cardAnimation {
+
+from{
+
+ opacity:0;
+
+ transform:translateY(40px);
+
+}
+
+
+to{
+
+ opacity:1;
+
+ transform:translateY(0);
+
+}
+
+}
+
+
+
+
+.mb-5:hover {
+
+ transform:translateY(-10px);
+
+ box-shadow:
+
+ 0 20px 45px rgba(0,0,0,.15);
+
+}
+
+
+
+
+section.container h3 {
+
+ color:#14213d;
+
+ font-size:28px;
+
+ font-weight:700;
+
+ margin-bottom:18px;
+
+ transition:.3s;
+
+}
+
+
+
+.mb-5:hover h3 {
+
+ color:#0d6efd;
+
+}
+
+
+
+
+/* =========================
+   LIST STYLE
+========================= */
+
+
+ul {
+
+ padding-left:25px;
+
+}
+
+
+ul li {
+
+ margin-bottom:14px;
+
+ font-size:17px;
+
+ color:#444;
+
+ position:relative;
+
+ animation:listAnimation .6s ease;
+
+}
+
+
+
+@keyframes listAnimation {
+
+from{
+
+opacity:0;
+
+transform:translateX(-20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+
+
+ul li::marker {
+
+ color:#0d6efd;
+
+ font-size:20px;
+
+}
+
+
+
+
+
+/* =========================
+   CTA BOX
+========================= */
+
+
+.bg-light {
+
+ background:
+
+ linear-gradient(
+ 135deg,
+ #eef6ff,
+ #ffffff
+ ) !important;
+
+
+ padding:45px !important;
+
+ border-radius:20px !important;
+
+ animation:pulseBox 3s infinite;
+
+}
+
+
+
+@keyframes pulseBox {
+
+0%{
+
+box-shadow:
+0 0 0 0 rgba(13,110,253,.2);
+
+}
+
+
+70%{
+
+box-shadow:
+0 0 0 20px rgba(13,110,253,0);
+
+}
+
+
+100%{
+
+box-shadow:
+0 0 0 0 rgba(13,110,253,0);
+
+}
+
+}
+
+
+
+
+/* =========================
+ BUTTON
+========================= */
+
+
+.btn-cta {
+
+ display:inline-block;
+
+ background:
+
+ linear-gradient(
+ 45deg,
+ #0d6efd,
+ #0056d2
+ );
+
+
+ color:white;
+
+ padding:14px 40px;
+
+ border-radius:50px;
+
+ font-weight:700;
+
+ text-decoration:none;
+
+ transition:.4s;
+
+ box-shadow:
+
+ 0 8px 20px rgba(13,110,253,.3);
+
+}
+
+
+
+.btn-cta:hover {
+
+ transform:translateY(-5px);
+
+ color:white;
+
+ box-shadow:
+
+ 0 15px 35px rgba(13,110,253,.5);
+
+}
+
+
+
+/* =========================
+ IMAGE
+========================= */
+
+
+.study-hero-image img {
+
+ width:100%;
+
+ border-radius:20px;
+
+ transition:.5s;
+
+}
+
+
+
+.study-hero-image img:hover {
+
+ transform:scale(1.03);
+
+}
+
+
+
+/* =========================
+ SIDEBAR LINKS
+========================= */
+
+
+.study-link {
+
+ display:block;
+
+ padding:12px 15px;
+
+ border-radius:10px;
+
+ color:#333;
+
+ text-decoration:none;
+
+ transition:.3s;
+
+}
+
+
+
+.study-link:hover,
+.study-link.active {
+
+
+ background:#0d6efd;
+
+ color:white;
+
+ transform:translateX(8px);
+
+}
+
+
+
+/* =========================
+ SCROLL ANIMATION
+========================= */
+
+
+@keyframes slideLeft {
+
+from{
+
+opacity:0;
+
+transform:translateX(-50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+
+
+@keyframes slideRight {
+
+from{
+
+opacity:0;
+
+transform:translateX(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+
+
+
+/* =========================
+ RESPONSIVE
+========================= */
+
+
+@media(max-width:992px){
+
+
+.page-hero{
+
+height:320px;
+
+}
+
+
+.page-hero-title{
+
+font-size:38px;
+
+}
+
+
+.study-section-title{
+
+font-size:32px;
+
+}
+
+
+.mb-5{
+
+padding:28px;
+
+}
+
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+.page-hero{
+
+height:260px;
+
+}
+
+
+.page-hero-title{
+
+font-size:30px;
+
+}
+
+
+
+section.container p{
+
+font-size:16px;
+
+}
+
+
+
+section.container h3{
+
+font-size:23px;
+
+}
+
+
+
+.mb-5{
+
+padding:22px;
+
+}
+
+
+
+.bg-light{
+
+padding:25px !important;
+
+}
+
+
+}
+
+
+
+
+@media(max-width:480px){
+
+
+.page-hero-title{
+
+font-size:26px;
+
+}
+
+
+.study-section-title{
+
+font-size:25px;
+
+}
+
+
+.btn-cta{
+
+padding:12px 25px;
+
+}
+
+
+}

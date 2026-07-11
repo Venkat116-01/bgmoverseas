@@ -1,37 +1,52 @@
 import { Link } from "react-router-dom";
+import aboutHero from "../images/about-bg.jpg";
 import img1 from "../images/image1.jpg";
 import img2 from "../images/image2.jpg";
 import img3 from "../images/image3.jpg";
+import newImg1 from "../images/new1.jpg";
 
 function About() {
   return (
     <>
+    <section className="page-hero"
+      style={{
+    backgroundImage: `url(${aboutHero})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+  }}> 
+    
+      
+  <div className="container justify-content-center text-center py-5">
+    <h1 className="page-hero-title">About us</h1>
+
+    <nav aria-label="breadcrumb" style={{ ['--bs-breadcrumb-divider']: " '>' " }}>
+      <ol className="breadcrumb justify-content-center">
+        <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+        <li className="breadcrumb-item"><Link to="/about">About</Link></li>
+        <li className="breadcrumb-item active" aria-current="page">About us</li>
+        
+      </ol>
+    </nav>
+  </div>
+</section>
     
     <section className="container py-5">
             <div className="row align-items-center gy-4">
               <div className="col-lg-6">
                 <p className="text-primary mb-2 fw-semibold">— About Us</p>
+                
                 <h1 className="display-5 fw-bold">
                   Your Gateway to Global Education, Career, and IT Solutions
                 </h1>
-                <p className="lead text-muted mt-4">
-                  At BGM Overseas, we are dedicated to transforming your dreams into reality.
-                  Whether you're aspiring to study at top universities abroad, seeking work
-                  opportunities in global markets, or in need of cutting-edge IT and healthcare
-                  solutions, we are here to guide you every step of the way.
-                </p>
-                <p className="lead text-muted mt-4">
-                  At BGM Overseas, we are dedicated to transforming your dreams into reality.
-                  Whether you're aspiring to study at top universities abroad, seeking work
-                  opportunities in global markets, or in need of cutting-edge IT and healthcare
-                  solutions, we are here to guide you every step of the way.
-                </p>
-                <p className="lead text-muted mt-4">
-                  At BGM Overseas, we are dedicated to transforming your dreams into reality.
-                  Whether you're aspiring to study at top universities abroad, seeking work
-                  opportunities in global markets, or in need of cutting-edge IT and healthcare
-                  solutions, we are here to guide you every step of the way.
-                </p>
+                <p>
+        At BGM Overseas, we help students achieve their global education goals.
+        From choosing the right university and course to visa assistance and pre-departure support, our expert counselors provide personalized guidance at every stage of your study abroad journey.
+        </p>
+        <p>Build your international career with BGM Overseas.
+           We connect skilled professionals with rewarding job opportunities across leading countries, offering end-to-end support including career guidance, documentation, visa assistance, and relocation services.</p>
+        <p>Our IT  solutions empower businesses to thrive in a competitive global market.
+           We provide innovative technology services, healthcare staffing, and consulting solutions tailored to meet the unique needs of our clients worldwide.</p>
               </div>
     
               <div className="col-lg-6">
@@ -46,11 +61,32 @@ function About() {
           <img src={img3} alt="Handshake" className="img-fluid" />
         </div>
         <div className="hero-card overflow-hidden rounded-4 shadow-sm">
-          <img src={img1} alt="Study Abroad" className="img-fluid" />
+          <img src={newImg1} alt="Study Abroad" className="img-fluid" />
         </div>
       </div>
     </div>
             </div>
+               <div className="row gx-4 gy-4 mt-5">
+                <div className="col-sm-6">
+                  <div className="feature-card p-4 rounded-4">
+                    <div className="feature-icon">🤝</div>
+                    <h5>Expert Guidance</h5>
+                    <p>
+                      Our team of certified consultants offers in-depth knowledge and expertise, ensuring you make informed decisions.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-sm-6">
+                  <div className="feature-card p-4 rounded-4">
+                    <div className="feature-icon">🌐</div>
+                    <h5>Global Reach</h5>
+                    <p>
+                      From USA to Australia, we open doors to the world’s leading educational institutions and job markets.
+                    </p>
+                  </div>
+                </div>
+              </div>
+          
           </section>
     </>
   );
