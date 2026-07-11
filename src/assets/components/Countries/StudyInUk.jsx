@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import studyuk1 from "../../images/studyinuk1.png";
-import studyuk2 from "../../images/studyink2.png";
-import studyuk3 from "../../images/studyinuk2.png";
+// import studyuk2 from "../../images/studyink2.png";
+// import studyuk3 from "../../images/studyinuk2.png";
 import "../../pages/PagesHero.css";
 import "../../pages/StudyPages.css";
 
