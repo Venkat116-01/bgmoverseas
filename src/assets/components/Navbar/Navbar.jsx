@@ -27,7 +27,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top">
       <div className="container">
         <Link className="navbar-brand fw-bold d-flex align-items-center" to="/">
           <img src={logoo} alt="BGM Logo" className="navbar-logo ms-2" />
