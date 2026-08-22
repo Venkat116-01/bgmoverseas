@@ -17,6 +17,10 @@ import newImg1 from "../images/new1.jpg";
 import newImg2 from "../images/new2.jpg";
 import newImg3 from "../images/new3.png";
 import studyinuk01 from "../images/studyinuk2.png";
+import usaMitHero from "../images/usa-mit-hero.jpg";
+import usaMitCard from "../images/usa-mit-card.jpg";
+import usaHarvardCard from "../images/usa-harvard-card.jpg";
+import usaStanfordCard from "../images/usa-stanford-card.jpg";
 import "./Home.css";
 
 
@@ -87,6 +91,13 @@ function Home() {
   <div className="hero-overlay" />
 
   <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div className="carousel-indicators hero-indicators">
+      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1" />
+      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2" />
+      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3" />
+      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3" aria-label="Slide 4" />
+    </div>
+
     <div className="carousel-inner">
       <div className="carousel-item active">
         <img src={new6} className="d-block w-100" alt="Slide 1" />
@@ -105,7 +116,23 @@ function Home() {
       </div>
 
       <div className="carousel-item">
-        <img src={new5} className="d-block w-100" alt="Slide 2" />
+        <img src={usaMitHero} className="d-block w-100" alt="MIT campus, USA" />
+        <div className="carousel-caption carousel-caption-left">
+          <div className="hero-caption-card">
+            <p className="caption-subtitle">Study in the United States</p>
+            <h1>Ivy League Dreams, Realized</h1>
+            <p className="caption-text">
+              From MIT to Stanford, we help you navigate admissions, F-1 visas, and scholarships at America’s leading universities.
+            </p>
+            <Link to="/study/usa" className="btn btn-hero">
+              Explore USA Universities →
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="carousel-item">
+        <img src={new5} className="d-block w-100" alt="Slide 3" />
         <div className="carousel-caption carousel-caption-left">
           <div className="hero-caption-card">
             <p className="caption-subtitle">Learn from Expert Counselors</p>
@@ -121,7 +148,7 @@ function Home() {
       </div>
 
       <div className="carousel-item">
-        <img src={new4} className="d-block w-100" alt="Slide 3" />
+        <img src={new4} className="d-block w-100" alt="Slide 4" />
         <div className="carousel-caption carousel-caption-left">
           <div className="hero-caption-card">
             <p className="caption-subtitle">Start Your Journey Today</p>
@@ -315,6 +342,78 @@ function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="universities-section py-5">
+        <div className="container">
+          <div className="text-center mb-5">
+            <div className="section-label mb-3 justify-content-center">
+              <span className="label-icon">🎓</span>
+              <span>Featured Universities</span>
+            </div>
+            <h2 className="display-6 fw-bold">Get Guided Admission Into World-Ranked Universities</h2>
+            <p className="mx-auto" style={{ maxWidth: 680 }}>
+              A glimpse of the campuses our students dream of — and the admissions team that helps them get there.
+            </p>
+          </div>
+
+          <div className="row g-4">
+            <div className="col-md-4">
+              <div className="university-card">
+                <div className="university-card-img">
+                  <img src={usaHarvardCard} alt="Harvard University campus" />
+                  <span className="university-badge">USA</span>
+                </div>
+                <div className="university-card-body">
+                  <h4>Harvard University</h4>
+                  <p className="university-location">Cambridge, Massachusetts</p>
+                  <p className="university-desc">
+                    Ivy League excellence across law, business, medicine and the liberal arts.
+                  </p>
+                  <Link to="/study/usa" className="university-link">Learn More →</Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="university-card">
+                <div className="university-card-img">
+                  <img src={usaMitCard} alt="MIT campus" />
+                  <span className="university-badge">USA</span>
+                </div>
+                <div className="university-card-body">
+                  <h4>MIT</h4>
+                  <p className="university-location">Cambridge, Massachusetts</p>
+                  <p className="university-desc">
+                    A global leader in engineering, technology, and applied sciences.
+                  </p>
+                  <Link to="/study/usa" className="university-link">Learn More →</Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="university-card">
+                <div className="university-card-img">
+                  <img src={usaStanfordCard} alt="Stanford University campus" />
+                  <span className="university-badge">USA</span>
+                </div>
+                <div className="university-card-body">
+                  <h4>Stanford University</h4>
+                  <p className="university-location">Stanford, California</p>
+                  <p className="university-desc">
+                    Silicon Valley’s home for innovation, entrepreneurship, and research.
+                  </p>
+                  <Link to="/study/usa" className="university-link">Learn More →</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p className="university-photo-credit text-center mt-4 mb-0">
+            Campus photography via Wikimedia Commons contributors, licensed CC BY-SA.
+          </p>
         </div>
       </section>
 

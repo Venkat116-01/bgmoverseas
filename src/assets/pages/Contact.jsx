@@ -96,7 +96,7 @@ function Contact() {
                       <strong>Email:</strong> bgmoverseasconsultancy@gmail.com
                     </li>
                     <li>
-                      <strong>Address:</strong> Hyderabad, Telangana, India
+                      <strong>Address:</strong> Flat No: 304, Datta Sai Apartments, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana 500060, India
                     </li>
                   </ul>
                 </div>
