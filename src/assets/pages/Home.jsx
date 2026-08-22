@@ -21,93 +21,99 @@ function Home() {
   return (
     <>
       <section className="hero-section container-fluid px-0">
-  <div className="hero-overlay" />
+        <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <div className="hero-split">
+                <div className="hero-text-panel">
+                  <p className="caption-subtitle">Ready to Unlock Global Opportunities?</p>
+                  <h1>Your Future Awaits</h1>
+                  <p className="caption-text">
+                    Explore education pathways in Canada, USA, UK, and beyond. Let us guide you to success.
+                  </p>
+                  <Link to="/contact" className="btn btn-hero">
+                    Start Your Study Journey →
+                  </Link>
+                </div>
+                <div className="hero-image-panel">
+                  <img src={new6} alt="Students exploring global study opportunities" />
+                </div>
+              </div>
+            </div>
 
-  <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div className="carousel-indicators hero-indicators">
-      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1" />
-      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2" />
-      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3" />
-      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3" aria-label="Slide 4" />
-    </div>
+            <div className="carousel-item">
+              <div className="hero-split">
+                <div className="hero-text-panel">
+                  <p className="caption-subtitle">Study in the United States</p>
+                  <h1>Ivy League Dreams, Realized</h1>
+                  <p className="caption-text">
+                    From MIT to Stanford, we help you navigate admissions, F-1 visas, and scholarships at America's leading universities.
+                  </p>
+                  <Link to="/study/usa" className="btn btn-hero">
+                    Explore USA Universities →
+                  </Link>
+                </div>
+                <div className="hero-image-panel">
+                  <img src={usaMitHero} alt="MIT campus, USA" />
+                </div>
+              </div>
+            </div>
 
-    <div className="carousel-inner">
-      <div className="carousel-item active">
-        <img src={new6} className="d-block w-100" alt="Slide 1" />
-        <div className="carousel-caption carousel-caption-left">
-          <div className="hero-caption-card">
-            <p className="caption-subtitle">Ready to Unlock Global Opportunities?</p>
-            <h1>Your Future Awaits</h1>
-            <p className="caption-text">
-              Explore education pathways in Canada, USA, UK, and beyond. Let us guide you to success.
-            </p>
-            <Link to="/contact" className="btn btn-hero">
-              Start Your Study Journey →
-            </Link>
+            <div className="carousel-item">
+              <div className="hero-split">
+                <div className="hero-text-panel">
+                  <p className="caption-subtitle">Learn from Expert Counselors</p>
+                  <h1>Study Abroad with Confidence</h1>
+                  <p className="caption-text">
+                    Get personalized admission, visa and scholarship support for the world's top campuses.
+                  </p>
+                  <Link to="/why-bgm-overseas" className="btn btn-hero">
+                    See Why BGM Overseas →
+                  </Link>
+                </div>
+                <div className="hero-image-panel">
+                  <img src={new5} alt="Expert counselors guiding students" />
+                </div>
+              </div>
+            </div>
+
+            <div className="carousel-item">
+              <div className="hero-split">
+                <div className="hero-text-panel">
+                  <p className="caption-subtitle">Start Your Journey Today</p>
+                  <h1>Build Your Global Future</h1>
+                  <p className="caption-text">
+                    Join students who have successfully moved abroad with our complete support.
+                  </p>
+                  <Link to="/contact" className="btn btn-hero">
+                    Contact Us →
+                  </Link>
+                </div>
+                <div className="hero-image-panel">
+                  <img src={new4} alt="Students who moved abroad successfully" />
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div className="carousel-item">
-        <img src={usaMitHero} className="d-block w-100" alt="MIT campus, USA" />
-        <div className="carousel-caption carousel-caption-left">
-          <div className="hero-caption-card">
-            <p className="caption-subtitle">Study in the United States</p>
-            <h1>Ivy League Dreams, Realized</h1>
-            <p className="caption-text">
-              From MIT to Stanford, we help you navigate admissions, F-1 visas, and scholarships at America’s leading universities.
-            </p>
-            <Link to="/study/usa" className="btn btn-hero">
-              Explore USA Universities →
-            </Link>
+          <div className="carousel-indicators hero-indicators">
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1" />
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2" />
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3" />
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3" aria-label="Slide 4" />
           </div>
+
+          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true" />
+            <span className="visually-hidden">Previous</span>
+          </button>
+
+          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true" />
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
-      </div>
-
-      <div className="carousel-item">
-        <img src={new5} className="d-block w-100" alt="Slide 3" />
-        <div className="carousel-caption carousel-caption-left">
-          <div className="hero-caption-card">
-            <p className="caption-subtitle">Learn from Expert Counselors</p>
-            <h1>Study Abroad with Confidence</h1>
-            <p className="caption-text">
-              Get personalized admission, visa and scholarship support for the world’s top campuses.
-            </p>
-            <Link to="/services" className="btn btn-hero">
-              See Our Services →
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="carousel-item">
-        <img src={new4} className="d-block w-100" alt="Slide 4" />
-        <div className="carousel-caption carousel-caption-left">
-          <div className="hero-caption-card">
-            <p className="caption-subtitle">Start Your Journey Today</p>
-            <h1>Build Your Global Future</h1>
-            <p className="caption-text">
-              Join students who have successfully moved abroad with our complete support.
-            </p>
-            <Link to="/contact" className="btn btn-hero">
-              Contact Us →
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-      <span className="carousel-control-prev-icon" aria-hidden="true" />
-      <span className="visually-hidden">Previous</span>
-    </button>
-
-    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-      <span className="carousel-control-next-icon" aria-hidden="true" />
-      <span className="visually-hidden">Next</span>
-    </button>
-  </div>
-</section>
+      </section>
 
 
 
