@@ -1,29 +1,16 @@
 import { Link } from "react-router-dom";
 import "./Careers.css";
-import "./PagesHero.css";
+import PageHero from "../components/PageHero/PageHero";
 import whyBgmBg from "../images/why-bgm-bg.jpg";
 
 function Careers() {
   return (
     <>
-      <section className="page-hero"
-        style={{
-          backgroundImage: `url(${whyBgmBg})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}>
-        <div className="container justify-content-center text-center py-4">
-          <h1 className="page-hero-title">Careers</h1>
-          <nav aria-label="breadcrumb" style={{ ['--bs-breadcrumb-divider']: " '>' " }}>
-            <ol className="breadcrumb justify-content-center">
-              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-              <li className="breadcrumb-item"><Link to="/careers">Careers</Link></li>
-              <li className="breadcrumb-item active" aria-current="page">Careers</li>
-            </ol>
-          </nav>
-        </div>
-      </section>
+      <PageHero
+        title="Careers"
+        image={whyBgmBg}
+        crumbs={[{ label: "Home", to: "/" }, { label: "Careers" }]}
+      />
 
       <section className="container py-4">
         <div className="text-center mb-4">
@@ -72,7 +59,7 @@ function Careers() {
               <div className="card-body">
                 <h3 className="card-title">Apply Now</h3>
                 <p className="card-text">
-                  Send your resume and cover letter to careers@bgmoverseas.com or contact our team directly.
+                  Send your resume and cover letter to bgmoverseasconsultancy@gmail.com or contact our team directly.
                 </p>
                 <Link to="/contact" className="btn btn-primary mt-3">
                   Contact Us

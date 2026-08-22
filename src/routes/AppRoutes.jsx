@@ -14,6 +14,7 @@ import Contact from "../assets/pages/Contact";
 
 import WhyBgmOverseas from "../assets/pages/WhyBgmOverseas";
 import OurTeam from "../assets/pages/OurTeam";
+import NotFound from "../assets/pages/NotFound";
 
 
 
@@ -34,6 +35,7 @@ export default function AppRoutes() {
       <Route path="/our-team" element={<OurTeam />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/careers" element={<Careers />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

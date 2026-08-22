@@ -1,7 +1,7 @@
 .our-team-page {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #eef6ff 0%, #f8fbff 100%);
+  background: linear-gradient(180deg, var(--bg-soft-1, #eef6ff) 0%, var(--bg-soft-2, #f8fbff) 100%);
 }
 
 .our-team-page::before {
@@ -32,7 +32,7 @@
 }
 
 .section-header .text-primary {
-  color: #0b2d72;
+  color: var(--color-primary-dark, #0b2d72);
 }
 
 .team-card {
@@ -47,7 +47,7 @@
 .team-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 30px 70px rgba(15, 38, 95, 0.16);
-  background: linear-gradient(135deg, #f2b419 0%, #08183f 100%);
+  background: linear-gradient(135deg, var(--color-accent, #f2b419) 0%, var(--color-primary-dark, #08183f) 100%);
   color: #fff;
 }
 
@@ -65,8 +65,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f2b419 0%, #ff8b4b 100%);
-  color: #08183f;
+  background: linear-gradient(135deg, var(--color-accent, #f2b419) 0%, var(--color-accent-2, #ff8b4b) 100%);
+  color: var(--color-primary-dark, #08183f);
   font-size: 1.1rem;
   margin-bottom: 1.25rem;
   box-shadow: 0 12px 28px rgba(242, 180, 25, 0.24);
@@ -92,12 +92,12 @@
 
 .team-bio,
 .team-focus {
-  color: #5b667f;
+  color: var(--muted, #5b667f);
   line-height: 1.8;
 }
 
 .team-focus strong {
-  color: #0b2d72;
+  color: var(--color-primary-dark, #0b2d72);
 }
 
 @media (max-width: 768px) {

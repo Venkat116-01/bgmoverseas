@@ -1,21 +1,14 @@
 import { Link } from "react-router-dom";
-import "./PagesHero.css";
+import PageHero from "../components/PageHero/PageHero";
 import "./StudyPages.css";
 
 function StudyAbroad() {
   return (
     <>
-      <section className="page-hero">
-        <div className="container justify-content-center text-center py-4">
-          <h1 className="page-hero-title">Study Abroad</h1>
-          <nav aria-label="breadcrumb" style={{ ['--bs-breadcrumb-divider']: " '>' " }}>
-            <ol className="breadcrumb justify-content-center">
-              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-              <li className="breadcrumb-item active" aria-current="page">Study Abroad</li>
-            </ol>
-          </nav>
-        </div>
-      </section>
+      <PageHero
+        title="Study Abroad"
+        crumbs={[{ label: "Home", to: "/" }, { label: "Study Abroad" }]}
+      />
 
       <section className="study-layout container py-4">
         <div className="row g-4">
@@ -27,7 +20,6 @@ function StudyAbroad() {
                 <li><Link to="/study/uk" className="study-link">Study in UK</Link></li>
                 <li><Link to="/study/australia" className="study-link">Study in Australia</Link></li>
                 <li><Link to="/study/canada" className="study-link">Study in Canada</Link></li>
-                <li><Link to="/study/singapore" className="study-link">Study in Singapore</Link></li>
               </ul>
             </div>
           </aside>

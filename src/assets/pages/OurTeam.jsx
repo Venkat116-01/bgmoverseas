@@ -1,6 +1,5 @@
 import "./OurTeam.css";
-import "./PagesHero.css";
-import { Link } from "react-router-dom";
+import PageHero from "../components/PageHero/PageHero";
 import whyBgmBg from "../images/why-bgm-bg.jpg";
 
 function OurTeam() {
@@ -33,25 +32,11 @@ function OurTeam() {
 
   return (
     <>
-      <section className="page-hero"
-        style={{
-          backgroundImage: `url(${whyBgmBg})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="container justify-content-center text-center py-4">
-          <h1 className="page-hero-title">Our Team</h1>
-          <nav aria-label="breadcrumb" style={{ ['--bs-breadcrumb-divider']: " '>' " }}>
-            <ol className="breadcrumb justify-content-center">
-              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-              <li className="breadcrumb-item"><Link to="/our-team">Our Team</Link></li>
-              <li className="breadcrumb-item active" aria-current="page">Our Team</li>
-            </ol>
-          </nav>
-        </div>
-      </section>
+      <PageHero
+        title="Our Team"
+        image={whyBgmBg}
+        crumbs={[{ label: "Home", to: "/" }, { label: "Our Team" }]}
+      />
 
       <section className="our-team-page py-4">
         <div className="container">

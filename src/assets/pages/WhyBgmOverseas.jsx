@@ -1,33 +1,16 @@
 import "./WhyBgmOverseas.css";
-import "./PagesHero.css";
-import { Link } from "react-router-dom";
+import PageHero from "../components/PageHero/PageHero";
 import whyBgmBg from "../images/why-bgm-bg.jpg";
 
 function WhyBgmOverseas() {
   return (
     <>
-     <section className="page-hero"
-       style={{
-    backgroundImage: `url(${whyBgmBg})`,
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-  }}>
-     <div className="container justify-content-center text-center py-5">
-      <h1 className="page-hero-title">Why BGM Overseas</h1>
-    <nav aria-label="breadcrumb" style={{ ['--bs-breadcrumb-divider']: " '>' " }}>
-      <ol className="breadcrumb justify-content-center">
-        <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-        <li className="breadcrumb-item"><Link to="/why-bgm-overseas">Why BGM Overseas</Link></li>
-        <li className="breadcrumb-item active" aria-current="page">Why BGM Overseas</li>
-      </ol>
-    </nav>
-  </div>
-</section>
-    
-    
+      <PageHero
+        title="Why BGM Overseas"
+        image={whyBgmBg}
+        crumbs={[{ label: "Home", to: "/" }, { label: "Why BGM Overseas" }]}
+      />
 
-    
     <section className="why-bgm-page py-5">
       <div className="container">
         <div className="text-center mb-5">

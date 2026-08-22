@@ -33,7 +33,7 @@
 }
 
 .why-bgm-page .text-primary {
-  color: #0b2d72;
+  color: var(--color-primary-dark, #0b2d72);
 }
 
 .why-bgm-summary p,
@@ -56,7 +56,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #f2b419;
+  background: var(--color-accent, #f2b419);
   box-shadow: 0 0 12px rgba(242, 180, 25, 0.35);
 }
 
@@ -76,7 +76,7 @@
 .why-bgm-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 35px 70px rgba(15, 38, 95, 0.16);
-  background: linear-gradient(135deg, #f2b419 0%, #ff8a3d 35%, #08183f 100%);
+  background: linear-gradient(135deg, var(--color-accent, #f2b419) 0%, var(--color-accent-2, #ff8a3d) 35%, var(--color-primary-dark, #08183f) 100%);
   color: #fff;
 }
 
@@ -92,8 +92,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f2b419 0%, #ff8b42 100%);
-  color: #08183f;
+  background: linear-gradient(135deg, var(--color-accent, #f2b419) 0%, #ff8b42 100%);
+  color: var(--color-primary-dark, #08183f);
   margin-bottom: 1rem;
   font-size: 1.2rem;
   box-shadow: 0 14px 30px rgba(242, 180, 25, 0.22);

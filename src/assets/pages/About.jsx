@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import PageHero from "../components/PageHero/PageHero";
 import aboutHero from "../images/about-bg.jpg";
 import img1 from "../images/image1.jpg";
 import img2 from "../images/image2.jpg";
@@ -8,29 +8,12 @@ import newImg1 from "../images/new1.jpg";
 function About() {
   return (
     <>
-    <section className="page-hero"
-      style={{
-    backgroundImage: `url(${aboutHero})`,
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-  }}> 
-    
-      
-  <div className="container justify-content-center text-center py-5">
-    <h1 className="page-hero-title">About us</h1>
+      <PageHero
+        title="About us"
+        image={aboutHero}
+        crumbs={[{ label: "Home", to: "/" }, { label: "About us" }]}
+      />
 
-    <nav aria-label="breadcrumb" style={{ ['--bs-breadcrumb-divider']: " '>' " }}>
-      <ol className="breadcrumb justify-content-center">
-        <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-        <li className="breadcrumb-item"><Link to="/about">About</Link></li>
-        <li className="breadcrumb-item active" aria-current="page">About us</li>
-        
-      </ol>
-    </nav>
-  </div>
-</section>
-    
     <section className="container py-5">
             <div className="row align-items-center gy-4">
               <div className="col-lg-6">

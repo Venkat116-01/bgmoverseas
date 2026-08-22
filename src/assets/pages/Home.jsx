@@ -1,11 +1,6 @@
-
 import { Link } from "react-router-dom";
-// import img1 from "../../images/hero1.jpg";
-// import img2 from "../../images/hero2.jpg";
-// import img3 from "../../images/hero3.jpg";
 import homeImage1 from "../images/home1.jpg";
 import homeImage2 from "../images/home2.jpg";
-// import homeImage3 from "../images/home3.jpg";
 import new4 from "../images/new4.png";
 import img1 from "../images/image1.jpg";
 import img2 from "../images/image2.jpg";
@@ -13,10 +8,6 @@ import img3 from "../images/image3.jpg";
 import img4 from "../images/image4.jpg";
 import new5 from "../images/new5.png";
 import new6 from "../images/new6.png";
-import newImg1 from "../images/new1.jpg";
-import newImg2 from "../images/new2.jpg";
-import newImg3 from "../images/new3.png";
-import studyinuk01 from "../images/studyinuk2.png";
 import usaMitHero from "../images/usa-mit-hero.jpg";
 import usaMitCard from "../images/usa-mit-card.jpg";
 import usaHarvardCard from "../images/usa-harvard-card.jpg";
@@ -28,66 +19,7 @@ function Home() {
 
   return (
     <>
-    {/* Hero Carousel */}
- {/* <section className="container-fluid px-0 hero-carousel-section">
-        <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src={homeImage1} className="d-block w-100" alt="Slide 1" />
-              <div className="carousel-caption carousel-caption-left">
-                <p className="caption-subtitle">Ready to Unlock Global Opportunities?</p>
-                <h1>Your Future Awaits</h1>
-                <p className="caption-text">
-                  Explore education pathways in Canada, USA, UK, and beyond. Let us guide you to success.
-                </p>
-                <Link to="/contact" className="btn btn-hero">
-                  Start Your Study Journey →
-                </Link>
-              </div>
-            </div>
-
-            <div className="carousel-item">
-              <img src={homeImage2} className="d-block w-100" alt="Slide 2" />
-              <div className="carousel-caption carousel-caption-left">
-                <p className="caption-subtitle">Learn from Expert Counselors</p>
-                <h1>Study Abroad with Confidence</h1>
-                <p className="caption-text">
-                  Get personalized admission, visa and scholarship support for the world’s top campuses.
-                </p>
-                <Link to="/services" className="btn btn-hero">
-                  See Our Services →
-                </Link>
-              </div>
-            </div>
-
-            <div className="carousel-item">
-              <img src={homeImage3} className="d-block w-100" alt="Slide 3" />
-              <div className="carousel-caption carousel-caption-left">
-                <p className="caption-subtitle">Start Your Journey Today</p>
-                <h1>Build Your Global Future</h1>
-                <p className="caption-text">
-                  Join students who have successfully moved abroad with our complete support.
-                </p>
-                <Link to="/contact" className="btn btn-hero">
-                  Contact Us →
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true" />
-            <span className="visually-hidden">Previous</span>
-          </button>
-
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true" />
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
-      </section> */}
-
-<section className="hero-section container-fluid px-0">
+      <section className="hero-section container-fluid px-0">
   <div className="hero-overlay" />
 
   <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -177,53 +109,6 @@ function Home() {
 </section>
 
 
-
-     {/* about section */}
-      {/* <section className="container py-5">
-        <div className="row align-items-center gy-4">
-          <div className="col-lg-6">
-            <p className="text-primary mb-2 fw-semibold">— About Us</p>
-            <h1 className="display-5 fw-bold">
-              Your Gateway to Global Education, Career, and IT Solutions
-            </h1>
-            <p className="lead text-muted mt-4">
-              At BGM Overseas, we are dedicated to transforming your dreams into reality.
-              Whether you're aspiring to study at top universities abroad, seeking work
-              opportunities in global markets, or in need of cutting-edge IT and healthcare
-              solutions, we are here to guide you every step of the way.
-            </p>
-            <p className="lead text-muted mt-4">
-              At BGM Overseas, we are dedicated to transforming your dreams into reality.
-              Whether you're aspiring to study at top universities abroad, seeking work
-              opportunities in global markets, or in need of cutting-edge IT and healthcare
-              solutions, we are here to guide you every step of the way.
-            </p>
-            <p className="lead text-muted mt-4">
-              At BGM Overseas, we are dedicated to transforming your dreams into reality.
-              Whether you're aspiring to study at top universities abroad, seeking work
-              opportunities in global markets, or in need of cutting-edge IT and healthcare
-              solutions, we are here to guide you every step of the way.
-            </p>
-          </div>
-
-          <div className="col-lg-6">
-  <div className="hero-images-grid-two-by-two">
-    <div className="hero-card overflow-hidden rounded-4 shadow-sm">
-      <img src={img1} alt="Study" className="img-fluid" />
-    </div>
-    <div className="hero-card overflow-hidden rounded-4 shadow-sm">
-      <img src={img2} alt="Global" className="img-fluid" />
-    </div>
-    <div className="hero-card overflow-hidden rounded-4 shadow-sm">
-      <img src={img3} alt="Handshake" className="img-fluid" />
-    </div>
-    <div className="hero-card overflow-hidden rounded-4 shadow-sm">
-      <img src={img1} alt="Study Abroad" className="img-fluid" />
-    </div>
-  </div>
-</div>
-        </div>
-      </section> */}
 
       <section className="about-section py-5">
   <div className="container">
@@ -437,177 +322,59 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="team-section py-5">
-  <div className="container">
-    <div className="team-hero card team-hero-card shadow-sm border-0 mb-5">
-      <div className="card-body">
-        <p className="text-primary mb-2 fw-semibold">— Our Team</p>
-        <h2 className="display-5 fw-bold">Meet the Experts Behind BGM Overseas</h2>
-        <p>
-          Our counselors and advisors bring real admissions, visa and scholarship expertise to every student journey.
-        </p>
-      </div>
-    </div>
-
-    <div className="row g-4">
-      {[
-        {
-          name: "Aman Sharma",
-          role: "Founder & CEO",
-          description: "Overseas education expert with 5+ years of experience.",
-        },
-        {
-          name: "Priya Patel",
-          role: "Study Abroad Counselor",
-          description: "Specializes in USA and UK admissions.",
-        },
-        {
-          name: "Rohit Mehta",
-          role: "Visa Consultant",
-          description: "Helps students secure visa approvals smoothly.",
-        },
-      ].map((member) => (
-        <div className="col-md-4" key={member.name}>
-          <div className="team-member-card card h-100 shadow-sm border-0">
-            <div className="card-body">
-              <div className="team-member-badge">{member.name.split(" ").map((n) => n[0]).join("")}</div>
-              <h3 className="team-member-name">{member.name}</h3>
-              <p className="team-member-role text-primary">{member.role}</p>
-              <p className="team-member-description">{member.description}</p>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-   
-<section className="career-section container py-5">
-  <div className="text-center mb-5">
-    <p className="text-primary mb-2 fw-semibold">— Careers</p>
-    <h2 className="display-5 fw-bold">Grow Your Career with BGM Overseas</h2>
-    <p>
-      Join our student-focused team and help build successful overseas journeys.
-    </p>
-  </div>
-
-  <div className="row gy-4">
-    <div className="col-md-4">
-      <div className="career-card card h-100 shadow-sm border-0">
-        <div className="card-body">
-          <h3 className="card-title">Open Positions</h3>
-          <p className="card-text">
-            We are hiring counselors, admissions specialists, visa experts, and marketing professionals.
-          </p>
-          <ul>
-            <li>Study Abroad Counselor</li>
-            <li>Visa Assistance Expert</li>
-            <li>Content & Digital Marketing</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div className="col-md-4">
-      <div className="career-card card h-100 shadow-sm border-0">
-        <div className="card-body">
-          <h3 className="card-title">Why Work With Us</h3>
-          <p className="card-text">
-            Grow in a supportive team, access training, and make a real impact on student careers.
-          </p>
-          <ul>
-            <li>Flexible work culture</li>
-            <li>Professional development</li>
-            <li>Global student network</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div className="col-md-4">
-      <div className="career-card card h-100 shadow-sm border-0">
-        <div className="card-body">
-          <h3 className="card-title">Apply Now</h3>
-          <p className="card-text">
-            Send your resume and cover letter to bgmoverseasconsultancy@gmail.com or visit our contact page.
-          </p>
-          <Link to="/contact" className="btn btn-primary mt-3">
-            Contact Us
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section className="contact-section py-5">
-  <div className="container">
-    <div className="contact-intro text-center mb-5">
-      <p className="text-primary mb-2 fw-semibold">— Contact</p>
-      <h2 className="display-5 fw-bold">Let’s Talk About Your Overseas Plans</h2>
-      <p className="mx-auto" style={{ maxWidth: 720 }}>
-        We’re here to support your admissions, visa, and scholarship journey every
-        step of the way. Connect with our team for personalised overseas guidance.
-      </p>
-    </div>
-
-    <div className="row g-4 align-items-stretch">
-      <div className="col-lg-6">
-        <div className="contact-card contact-info-card h-100 shadow-sm border-0">
-          <div className="card-body">
-            <div className="contact-card-top">
-              <div className="contact-icon">📞</div>
-              <div>
-                <h4 className="card-title mb-2">Get in Touch</h4>
-                <p className="text-muted mb-0">
-                  Our advisors are ready to help you with study abroad, visa,
-                  scholarship and career planning support.
-                </p>
+      <section className="home-teasers py-5">
+        <div className="container">
+          <div className="row g-4">
+            <div className="col-lg-4">
+              <div className="teaser-card card h-100 shadow-sm border-0">
+                <div className="card-body">
+                  <p className="text-primary mb-2 fw-semibold">— Our Team</p>
+                  <h3 className="card-title">Meet the Experts Behind BGM Overseas</h3>
+                  <p className="card-text text-muted">
+                    Our counselors and advisors bring real admissions, visa and
+                    scholarship expertise to every student journey.
+                  </p>
+                  <Link to="/our-team" className="btn btn-outline-primary mt-2">
+                    Meet the Team
+                  </Link>
+                </div>
               </div>
             </div>
 
-            <ul className="contact-list list-unstyled mt-4">
-              <li>
-                <strong>Phone:</strong> +91 94909 96326
-              </li>
-              <li>
-                <strong>Email:</strong> bgmoverseasconsultancy@gmail.com
-              </li>
-              <li>
-                <strong>Address:</strong> Hyderbad, India
-              </li>
-            </ul>
+            <div className="col-lg-4">
+              <div className="teaser-card card h-100 shadow-sm border-0">
+                <div className="card-body">
+                  <p className="text-primary mb-2 fw-semibold">— Careers</p>
+                  <h3 className="card-title">Grow Your Career with BGM Overseas</h3>
+                  <p className="card-text text-muted">
+                    Join our student-focused team and help build successful
+                    overseas journeys.
+                  </p>
+                  <Link to="/careers" className="btn btn-outline-primary mt-2">
+                    View Openings
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4">
+              <div className="teaser-card card h-100 shadow-sm border-0">
+                <div className="card-body">
+                  <p className="text-primary mb-2 fw-semibold">— Contact</p>
+                  <h3 className="card-title">Let's Talk About Your Overseas Plans</h3>
+                  <p className="card-text text-muted">
+                    Reach out today for free guidance on applications, visas,
+                    scholarships, and career planning.
+                  </p>
+                  <Link to="/contact" className="btn btn-primary mt-2">
+                    Send a Message
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="col-lg-6">
-        <div className="contact-card contact-action-card h-100 shadow-sm border-0">
-          <div className="card-body">
-            <h4 className="card-title mb-3">Ready to get started?</h4>
-            <p className="text-muted mb-4">
-              Reach out today for free guidance on applications, visas,
-              scholarships, and career planning.
-            </p>
-            <Link to="/contact" className="btn btn-primary contact-btn">
-              Send a Message
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-   
-
-
-
+      </section>
     </>
   );
 }

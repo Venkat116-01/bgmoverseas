@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import { Link } from "react-router-dom";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import PageHero from "../components/PageHero/PageHero";
+import { supabase } from "../../lib/supabaseClient";
 import "./Contact.css";
-import "./PagesHero.css";
 import whyBgmBg from "../images/why-bgm-bg.jpg";
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -20,8 +21,8 @@ function Contact() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    try {
-      await emailjs.send(
+    const [emailResult, dbResult] = await Promise.allSettled([
+      emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
         {
@@ -31,36 +32,39 @@ function Contact() {
           message: data.message,
         },
         PUBLIC_KEY
-      );
+      ),
+      supabase
+        ? supabase.from("contact_submissions").insert({
+            name: data.name,
+            email: data.email,
+            subject: data.subject,
+            message: data.message,
+          })
+        : Promise.reject(new Error("Supabase is not configured")),
+    ]);
 
+    if (emailResult.status === "rejected") {
+      console.error("EmailJS error", emailResult.reason);
+    }
+    if (dbResult.status === "rejected") {
+      console.error("Supabase insert error", dbResult.reason);
+    }
+
+    if (emailResult.status === "fulfilled" || dbResult.status === "fulfilled") {
       setServerMessage("Message sent successfully!");
       reset();
-    } catch (error) {
-      console.error("EmailJS error", error);
+    } else {
       setServerMessage("Failed to send message. Please try again.");
     }
   };
 
   return (
     <>
-      <section className="page-hero"
-      style={{
-                backgroundImage: `url(${whyBgmBg})`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-              }}>
-        <div className="container justify-content-center text-center py-4">
-          <h1 className="page-hero-title">Contact</h1>
-          <nav aria-label="breadcrumb" style={{ ['--bs-breadcrumb-divider']: " '>' " }}>
-            <ol className="breadcrumb justify-content-center">
-              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-              <li className="breadcrumb-item"><Link to="/contact">Contact</Link></li>
-              <li className="breadcrumb-item active" aria-current="page">Contact</li>
-            </ol>
-          </nav>
-        </div>
-      </section>
+      <PageHero
+        title="Contact"
+        image={whyBgmBg}
+        crumbs={[{ label: "Home", to: "/" }, { label: "Contact" }]}
+      />
 
       <section className="contact-page py-4">
         <div className="container">
@@ -82,21 +86,21 @@ function Contact() {
               <div className="card contact-card shadow-sm h-100">
                 <div className="card-body">
                   <div className="contact-card-top">
-                    <div className="contact-icon">📞</div>
+                    <div className="contact-icon"><FaPhoneAlt /></div>
                     <div>
                       <h4 className="card-title">Get in Touch</h4>
-                    
+
                     </div>
                   </div>
                   <ul className="contact-list list-unstyled mt-4">
                     <li>
-                      <strong>Phone:</strong> +91 94909 96326 
+                      <FaPhoneAlt className="contact-list-icon" /> <strong>Phone:</strong> +91 94909 96326
                     </li>
                     <li>
-                      <strong>Email:</strong> bgmoverseasconsultancy@gmail.com
+                      <FaEnvelope className="contact-list-icon" /> <strong>Email:</strong> bgmoverseasconsultancy@gmail.com
                     </li>
                     <li>
-                      <strong>Address:</strong> Flat No: 304, Datta Sai Apartments, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana 500060, India
+                      <FaMapMarkerAlt className="contact-list-icon" /> <strong>Address:</strong> Flat No: 304, Datta Sai Apartments, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana 500060, India
                     </li>
                   </ul>
                 </div>
