@@ -563,7 +563,12 @@
 }
 
 .hero-caption-card {
-  padding: 0;
+  padding: 2.5rem;
+  background: rgba(3, 8, 26, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .caption-subtitle {
@@ -668,6 +673,10 @@
   .carousel-caption-left {
     width: 88%;
     left: 6%;
+  }
+
+  .hero-caption-card {
+    padding: 1.5rem;
   }
 }
 

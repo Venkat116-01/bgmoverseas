@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaGlobeAmericas, FaGraduationCap, FaHandshake, FaGlobe } from "react-icons/fa";
 import homeImage1 from "../images/home1.jpg";
 import homeImage2 from "../images/home2.jpg";
 import new4 from "../images/new4.png";
@@ -179,7 +180,7 @@ function Home() {
           <div className="row align-items-center gy-4">
             <div className="col-lg-6">
               <div className="section-label mb-3">
-                <span className="label-icon">🌍</span>
+                <span className="label-icon"><FaGlobeAmericas /></span>
                 <span>Why BGM Overseas?</span>
               </div>
               <h2 className="display-6 fw-bold">
@@ -197,7 +198,7 @@ function Home() {
               <div className="row gx-4 gy-4 mt-5">
                 <div className="col-sm-6">
                   <div className="feature-card p-4 rounded-4">
-                    <div className="feature-icon">🤝</div>
+                    <div className="feature-icon"><FaHandshake /></div>
                     <h5>Expert Guidance</h5>
                     <p>
                       Our team of certified consultants offers in-depth knowledge and expertise, ensuring you make informed decisions.
@@ -206,7 +207,7 @@ function Home() {
                 </div>
                 <div className="col-sm-6">
                   <div className="feature-card p-4 rounded-4">
-                    <div className="feature-icon">🌐</div>
+                    <div className="feature-icon"><FaGlobe /></div>
                     <h5>Global Reach</h5>
                     <p>
                       From USA to Australia, we open doors to the world’s leading educational institutions and job markets.
@@ -234,7 +235,7 @@ function Home() {
         <div className="container">
           <div className="text-center mb-5">
             <div className="section-label mb-3 justify-content-center">
-              <span className="label-icon">🎓</span>
+              <span className="label-icon"><FaGraduationCap /></span>
               <span>Featured Universities</span>
             </div>
             <h2 className="display-6 fw-bold">Get Guided Admission Into World-Ranked Universities</h2>

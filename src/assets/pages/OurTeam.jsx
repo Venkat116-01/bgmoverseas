@@ -57,7 +57,9 @@ function OurTeam() {
               <div className="col-md-6 col-xl-3" key={member.name}>
                 <div className="team-card card h-100 shadow-sm">
                   <div className="card-body">
-                    <div className="team-badge">★</div>
+                    <div className="team-badge">
+                      {member.name.split(" ").map((n) => n[0]).join("")}
+                    </div>
                     <h3 className="team-name">{member.name}</h3>
                     <p className="team-role">{member.role}</p>
                     <p className="team-bio">{member.description}</p>

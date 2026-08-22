@@ -1,3 +1,4 @@
+import { FaHandshake, FaGlobe } from "react-icons/fa";
 import PageHero from "../components/PageHero/PageHero";
 import aboutHero from "../images/about-bg.jpg";
 import img1 from "../images/image1.jpg";
@@ -52,7 +53,7 @@ function About() {
                <div className="row gx-4 gy-4 mt-5">
                 <div className="col-sm-6">
                   <div className="feature-card p-4 rounded-4">
-                    <div className="feature-icon">🤝</div>
+                    <div className="feature-icon"><FaHandshake /></div>
                     <h5>Expert Guidance</h5>
                     <p>
                       Our team of certified consultants offers in-depth knowledge and expertise, ensuring you make informed decisions.
@@ -61,7 +62,7 @@ function About() {
                 </div>
                 <div className="col-sm-6">
                   <div className="feature-card p-4 rounded-4">
-                    <div className="feature-icon">🌐</div>
+                    <div className="feature-icon"><FaGlobe /></div>
                     <h5>Global Reach</h5>
                     <p>
                       From USA to Australia, we open doors to the world’s leading educational institutions and job markets.

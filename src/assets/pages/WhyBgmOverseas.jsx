@@ -1,3 +1,13 @@
+import {
+  FaGlobeAmericas,
+  FaGraduationCap,
+  FaHandshake,
+  FaBriefcase,
+  FaChartLine,
+  FaTrophy,
+  FaBolt,
+  FaCheckCircle,
+} from "react-icons/fa";
 import "./WhyBgmOverseas.css";
 import PageHero from "../components/PageHero/PageHero";
 import whyBgmBg from "../images/why-bgm-bg.jpg";
@@ -61,7 +71,7 @@ function WhyBgmOverseas() {
             <div className="why-bgm-cards row g-3">
               <div className="col-12">
                 <div className="why-bgm-card">
-                  <div className="why-bgm-icon">🌍</div>
+                  <div className="why-bgm-icon"><FaGlobeAmericas /></div>
                   <h3>Global University Network</h3>
                   <p>
                     Strong partnerships with top institutions in the USA, UK, Canada,
@@ -71,7 +81,7 @@ function WhyBgmOverseas() {
               </div>
               <div className="col-12">
                 <div className="why-bgm-card">
-                  <div className="why-bgm-icon">🎓</div>
+                  <div className="why-bgm-icon"><FaGraduationCap /></div>
                   <h3>End-to-End Admission Support</h3>
                   <p>
                     Application strategy, SOP writing, test preparation advice, and
@@ -86,7 +96,7 @@ function WhyBgmOverseas() {
         <div className="row gy-4 mt-5">
           <div className="col-md-6">
             <div className="why-bgm-card big-card">
-              <div className="why-bgm-icon">🤝</div>
+              <div className="why-bgm-icon"><FaHandshake /></div>
               <h3>Experienced Counselors</h3>
               <p>
                 Our advisors have helped hundreds of students navigate overseas
@@ -96,7 +106,7 @@ function WhyBgmOverseas() {
           </div>
           <div className="col-md-6">
             <div className="why-bgm-card big-card">
-              <div className="why-bgm-icon">💼</div>
+              <div className="why-bgm-icon"><FaBriefcase /></div>
               <h3>Career-Driven Coaching</h3>
               <p>
                 We support career trajectory planning, internships, work permits,
@@ -109,7 +119,7 @@ function WhyBgmOverseas() {
         <div className="row gy-4 mt-5">
           <div className="col-md-4">
             <div className="why-bgm-card">
-              <div className="why-bgm-icon">📈</div>
+              <div className="why-bgm-icon"><FaChartLine /></div>
               <h3>Success Rate</h3>
               <p>
                 90%+ approval rate on student visas and university offers for our
@@ -119,7 +129,7 @@ function WhyBgmOverseas() {
           </div>
           <div className="col-md-4">
             <div className="why-bgm-card">
-              <div className="why-bgm-icon">🏆</div>
+              <div className="why-bgm-icon"><FaTrophy /></div>
               <h3>Scholarship Wins</h3>
               <p>
                 Students receive tuition support and merit-based awards across
@@ -129,7 +139,7 @@ function WhyBgmOverseas() {
           </div>
           <div className="col-md-4">
             <div className="why-bgm-card">
-              <div className="why-bgm-icon">⚡</div>
+              <div className="why-bgm-icon"><FaBolt /></div>
               <h3>Fast Support</h3>
               <p>
                 Dedicated counselor access, quick application guidance, and fast
@@ -168,7 +178,7 @@ function WhyBgmOverseas() {
             ].map((step) => (
               <div className="col-md-6" key={step.title}>
                 <div className="why-bgm-card">
-                  <div className="why-bgm-icon">✅</div>
+                  <div className="why-bgm-icon"><FaCheckCircle /></div>
                   <h4>{step.title}</h4>
                   <p>{step.text}</p>
                 </div>
