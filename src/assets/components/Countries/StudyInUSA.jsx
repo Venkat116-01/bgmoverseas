@@ -1,8 +1,26 @@
 import { Link } from "react-router-dom";
 import PageHero from "../PageHero/PageHero";
 import heroImg from "../../images/studyinusa1.png";
-import studyusa2 from "../../images/studyinusa2.png";
 import "../../pages/StudyPages.css";
+
+const USA_UNIVERSITIES = [
+  { name: "Adelphi University", url: "https://www.adelphi.edu" },
+  { name: "Anderson University", url: "https://www.anderson.edu" },
+  { name: "Campbellsville University", url: "https://www.campbellsville.edu" },
+  { name: "Cumberland University", url: "https://www.cumberland.edu" },
+  { name: "Faulkner University", url: "https://www.faulkner.edu" },
+  { name: "Golden Gate University", url: "https://www.ggu.edu" },
+  { name: "Marshall University", url: "https://www.marshall.edu" },
+  { name: "Murray State University", url: "https://www.murraystate.edu" },
+  { name: "Purdue University Northwest", url: "https://www.pnw.edu" },
+  { name: "St. Francis College", url: "https://www.sfc.edu" },
+  { name: "University of the Cumberlands", url: "https://www.ucumberlands.edu" },
+  { name: "University of Louisville", url: "https://www.louisville.edu" },
+  { name: "Wayland Baptist University", url: "https://www.wbu.edu" },
+  { name: "Baptist University of Florida", url: "https://www.baptistuniversity.edu" },
+  { name: "Wittenberg University", url: "https://www.wittenberg.edu" },
+  { name: "Central Michigan University", url: "https://www.cmich.edu" },
+];
 
 export default function StudyInUSA() {
   return (
@@ -13,7 +31,169 @@ export default function StudyInUSA() {
         crumbs={[{ label: "Home", to: "/" }, { label: "Study in USA" }]}
       />
 
-      <section className="mt-5 container">
+      <section className="study-layout container py-5">
+        <div className="row g-4">
+          <aside className="col-lg-3">
+            <div className="study-sidebar card shadow-sm">
+              <ul className="study-list list-unstyled">
+                <li><Link to="/study/usa" className="study-link active">Study in USA</Link></li>
+                <li><Link to="/study/uk" className="study-link">Study in UK</Link></li>
+                <li><Link to="/study/australia" className="study-link">Study in Australia</Link></li>
+                <li><Link to="/study/canada" className="study-link">Study in Canada</Link></li>
+              </ul>
+            </div>
+          </aside>
+
+          <main className="col-lg-9">
+            <div className="study-content">
+              <h2 className="study-section-title">Universities</h2>
+              <div className="study-partners-grid mb-5">
+                {USA_UNIVERSITIES.map((u) => (
+                  <a
+                    key={u.name}
+                    href={u.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="study-partner-card"
+                  >
+                    {u.name}
+                  </a>
+                ))}
+              </div>
+
+              <div className="study-tab-card card p-4 shadow-sm">
+                <ul className="nav nav-pills mb-4 justify-content-center" id="studyTab" role="tablist">
+                  <li className="nav-item" role="presentation">
+                    <button className="nav-link active" id="career-tab" data-bs-toggle="pill" data-bs-target="#career" type="button" role="tab" aria-controls="career" aria-selected="true">
+                      Career Opportunities
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button className="nav-link" id="visa-tab" data-bs-toggle="pill" data-bs-target="#visa" type="button" role="tab" aria-controls="visa" aria-selected="false">
+                      Visa & More
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button className="nav-link" id="fees-tab" data-bs-toggle="pill" data-bs-target="#fees" type="button" role="tab" aria-controls="fees" aria-selected="false">
+                      Fees & Finances
+                    </button>
+                  </li>
+                </ul>
+
+                <div className="tab-content" id="studyTabContent">
+                  <div className="tab-pane fade show active" id="career" role="tabpanel" aria-labelledby="career-tab">
+                    <h4>Career Opportunities</h4>
+                    <p>
+                      The course you choose shapes the roles you become eligible for.
+                      A few common course-to-career pathways our students follow:
+                    </p>
+                    <ul>
+                      <li>MS Aerospace Engineering → Aircraft Engineer</li>
+                      <li>MBA → Business Consultant</li>
+                      <li>MS Computer Science → Software Developer</li>
+                      <li>MS Civil Engineering → Geotechnical Engineer</li>
+                      <li>MS Chemical Engineering → Process/Nuclear Engineer</li>
+                      <li>MS Data Science → Data Analyst</li>
+                      <li>MS Electrical Engineering → Controls Engineer</li>
+                      <li>MS Health Informatics → Clinical Data Analyst</li>
+                      <li>MS Pharmacology → Drug Safety Specialist</li>
+                      <li>MS Mechanical Engineering → Manufacturing Engineer</li>
+                    </ul>
+                  </div>
+
+                  <div className="tab-pane fade" id="visa" role="tabpanel" aria-labelledby="visa-tab">
+                    <h4>Visa & More</h4>
+                    <p>
+                      We prepare you for both stages of the F-1 student visa process —
+                      the Offsite Facilitation Centre (OFC) appointment and the
+                      Consulate/VAC interview.
+                    </p>
+                    <h5 className="mt-3">At the OFC</h5>
+                    <ul>
+                      <li>Valid passport</li>
+                      <li>DS-160 confirmation page</li>
+                      <li>Visa appointment confirmation page</li>
+                      <li>SEVIS fee (I-901) payment receipt</li>
+                      <li>I-20 form</li>
+                      <li>Visa fee payment receipt</li>
+                    </ul>
+                    <h5 className="mt-3">At the VAC / Consulate interview</h5>
+                    <p className="mb-1"><strong>University documents (originals):</strong></p>
+                    <ul>
+                      <li>Signed original I-20 form</li>
+                      <li>Admission offer letter</li>
+                      <li>Scholarship / funding letter, if any</li>
+                      <li>I-20s from any other universities you applied to</li>
+                    </ul>
+                    <p className="mb-1 mt-3"><strong>Academic documents (originals):</strong></p>
+                    <ul>
+                      <li>10th & 12th grade mark sheets</li>
+                      <li>Degree transcripts and provisional/original degree certificate</li>
+                      <li>IELTS/TOEFL and GRE/GMAT score sheets</li>
+                      <li>Work experience letters, if any</li>
+                    </ul>
+                    <p className="mb-1 mt-3"><strong>Financial documents:</strong></p>
+                    <ul>
+                      <li>Sponsor's bank balance certificate and 6-12 month transaction history</li>
+                      <li>Fixed deposits and savings certificates</li>
+                      <li>Property documents and tax receipts, if used as funding proof</li>
+                      <li>Latest salary slips (if sponsor is employed) and last 2-3 years' IT returns</li>
+                      <li>Affidavit of support from the sponsor</li>
+                    </ul>
+                  </div>
+
+                  <div className="tab-pane fade" id="fees" role="tabpanel" aria-labelledby="fees-tab">
+                    <h4>Fees & Finances</h4>
+                    <ol className="ps-3">
+                      <li>Application Fees: $0 – $150 per university</li>
+                      <li>
+                        Tuition Fees:
+                        <ul>
+                          <li>Undergraduate: $15,000 – $55,000 / year</li>
+                          <li>Postgraduate: $15,000 – $65,000 / year</li>
+                        </ul>
+                      </li>
+                      <li>Living Expenses: $10,000 – $20,000 / year</li>
+                      <li>
+                        Exam Fees:
+                        <ul>
+                          <li>IELTS: INR 19,000</li>
+                          <li>TOEFL: INR 18,000</li>
+                          <li>PTE: INR 18,900</li>
+                          <li>Duolingo: $59 – $70</li>
+                          <li>GRE: INR 22,550 (plus ~$228 US application fee)</li>
+                          <li>GMAT: $324</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Score Reporting Charges:
+                        <ul>
+                          <li>IELTS: Free for 5 universities, then INR 250 each</li>
+                          <li>TOEFL: ~$25 per additional report</li>
+                          <li>PTE & Duolingo: Free, unlimited</li>
+                          <li>GRE: ~$40 (free for 5 before the exam)</li>
+                          <li>GMAT: ~$35</li>
+                        </ul>
+                      </li>
+                      <li>Scholarships & Grants: $2,000 up to full tuition, depending on the university</li>
+                      <li>Miscellaneous: WES credential evaluation ~$118–$186</li>
+                      <li>
+                        Visa Charges:
+                        <ul>
+                          <li>Visa application (MRV) fee: ~$185</li>
+                          <li>SEVIS I-901 fee: ~$350</li>
+                        </ul>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </section>
+
+      <section className="mt-5 mb-5 container">
         <h2 className="study-section-title mb-4">Why Study in the USA?</h2>
 
         <p className="mb-4">
@@ -132,156 +312,11 @@ export default function StudyInUSA() {
             turn your dream of studying in the USA into reality.
           </p>
         </div>
-      </section>
 
-      <section className="study-layout container py-5">
-        <div className="row g-4">
-          <aside className="col-lg-4">
-            <div className="study-sidebar card p-4 shadow-sm">
-              <h3 className="mb-3">Study</h3>
-              <ul className="study-list list-unstyled">
-                <li><Link to="/study/usa" className="study-link active">Study in USA</Link></li>
-                <li><Link to="/study/uk" className="study-link">Study in UK</Link></li>
-                <li><Link to="/study/australia" className="study-link">Study in Australia</Link></li>
-                <li><Link to="/study/canada" className="study-link">Study in Canada</Link></li>
-              </ul>
-            </div>
-          </aside>
-
-          <main className="col-lg-8">
-            <div className="study-hero-image mb-4">
-              <img src={studyusa2} alt="Study in USA" className="img-fluid rounded-3 shadow-sm" />
-            </div>
-
-            <div className="study-content">
-              <h2 className="study-section-title">Universities</h2>
-              <div className="study-partners-grid mb-5">
-                <div className="study-partner-card">Adelphi University</div>
-                <div className="study-partner-card">Anderson University</div>
-                <div className="study-partner-card">Campbellsville University</div>
-                <div className="study-partner-card">Cumberland University</div>
-                <div className="study-partner-card">Faulkner University</div>
-                <div className="study-partner-card">Golden Gate University</div>
-                <div className="study-partner-card">Marshall University</div>
-                <div className="study-partner-card">Murray State University</div>
-                <div className="study-partner-card">Purdue University Northwest</div>
-                <div className="study-partner-card">St. Francis College</div>
-                <div className="study-partner-card">University of the Cumberlands</div>
-                <div className="study-partner-card">University of Louisville</div>
-                <div className="study-partner-card">Wayland Baptist University</div>
-                <div className="study-partner-card">Baptist University of Florida</div>
-                <div className="study-partner-card">Wittenberg University</div>
-                <div className="study-partner-card">Central Michigan University</div>
-              </div>
-
-              <div className="study-tab-card card p-4 shadow-sm">
-                <ul className="nav nav-pills mb-4 justify-content-center" id="studyTab" role="tablist">
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link active" id="universities-tab" data-bs-toggle="pill" data-bs-target="#universities" type="button" role="tab" aria-controls="universities" aria-selected="true">
-                      Universities & Courses
-                    </button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="career-tab" data-bs-toggle="pill" data-bs-target="#career" type="button" role="tab" aria-controls="career" aria-selected="false">
-                      Career Opportunities
-                    </button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="visa-tab" data-bs-toggle="pill" data-bs-target="#visa" type="button" role="tab" aria-controls="visa" aria-selected="false">
-                      Visa & More
-                    </button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="fees-tab" data-bs-toggle="pill" data-bs-target="#fees" type="button" role="tab" aria-controls="fees" aria-selected="false">
-                      Fees & Finances
-                    </button>
-                  </li>
-                </ul>
-
-                <div className="tab-content" id="studyTabContent">
-                  <div className="tab-pane fade show active" id="universities" role="tabpanel" aria-labelledby="universities-tab">
-                    <h4>Top Programs in the USA</h4>
-                    <p>
-                      Study at our partner universities across business, engineering,
-                      health sciences, IT, hospitality, and liberal arts. We help
-                      you select programs with strong career outcomes and scholarship
-                      opportunities.
-                    </p>
-                    <ul>
-                      <li>Business Administration & Management</li>
-                      <li>Computer Science & Data Analytics</li>
-                      <li>Engineering (Mechanical, Civil, Electrical)</li>
-                      <li>Healthcare & Nursing Programs</li>
-                      <li>Hospitality Management & Tourism</li>
-                    </ul>
-                  </div>
-
-                  <div className="tab-pane fade" id="career" role="tabpanel" aria-labelledby="career-tab">
-                    <h4>Career Opportunities</h4>
-                    <p>
-                      The USA offers strong internships, co-op placements, and
-                      post-study work options. We support your professional profile,
-                      resume guidance, and employer-facing application strategy.
-                    </p>
-                    <ul>
-                      <li>Industry internships and campus recruiting</li>
-                      <li>STEM OPT and work authorization support</li>
-                      <li>Networking and career mentoring</li>
-                      <li>Graduate employment pathways in finance, tech, and health</li>
-                    </ul>
-                  </div>
-
-                  <div className="tab-pane fade" id="visa" role="tabpanel" aria-labelledby="visa-tab">
-                    <h4>Visa & More</h4>
-                    <p>
-                      We help you prepare all visa documents, application forms,
-                      interview coaching, and travel planning so your study journey
-                      is smooth and stress-free.
-                    </p>
-                    <ul>
-                      <li>F-1 student visa application support</li>
-                      <li>SEVIS fee and visa interview guidance</li>
-                      <li>Document checklist and pre-departure planning</li>
-                      <li>Travel insurance and accommodation advice</li>
-                    </ul>
-                  </div>
-
-                  <div className="tab-pane fade" id="fees" role="tabpanel" aria-labelledby="fees-tab">
-                    <h4>Fees & Finances</h4>
-                    <ol className="ps-3">
-                      <li>Application Fees: $0 – $150 per university</li>
-                      <li>
-                        Tuition Fees:
-                        <ul>
-                          <li>Undergraduate: $15,000 – $55,000 / year</li>
-                          <li>Postgraduate: $15,000 – $65,000 / year</li>
-                        </ul>
-                      </li>
-                      <li>Living Expenses: $10,000 – $20,000 / year</li>
-                      <li>
-                        Exam Fees:
-                        <ul>
-                          <li>IELTS: INR 19,000</li>
-                          <li>TOEFL: INR 18,000</li>
-                          <li>PTE: INR 18,900</li>
-                          <li>Duolingo: $59 – $70</li>
-                          <li>GRE: INR 22,550</li>
-                          <li>GMAT: $324</li>
-                        </ul>
-                      </li>
-                      <li>Score Reporting: Free for 5 universities, INR 250 per additional report</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-
-              <div className="text-center mt-4">
-                <Link to="/contact" className="btn btn-cta">
-                  Contact Us for USA Admission
-                </Link>
-              </div>
-            </div>
-          </main>
+        <div className="text-center mt-4">
+          <Link to="/contact" className="btn btn-cta">
+            Contact Us for USA Admission
+          </Link>
         </div>
       </section>
     </>

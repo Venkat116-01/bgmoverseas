@@ -23,11 +23,11 @@ nav.navbar {
 }
 
 /* Navbar link hover / active */
-.nav-link {
+nav.navbar .nav-link {
   color: #fff !important;
 }
-.nav-link:hover,
-.nav-link:focus {
+nav.navbar .nav-link:hover,
+nav.navbar .nav-link:focus {
   color: var(--color-accent) !important;
   background: rgba(255,255,255,0.04);
   border-radius: 0.35rem;

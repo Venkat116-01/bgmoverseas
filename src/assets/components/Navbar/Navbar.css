@@ -43,7 +43,7 @@
 
 .navbar-brand:hover .navbar-logo {
 
-  transform:rotate(360deg);
+  transform:scale(1.12);
 
 }
 
