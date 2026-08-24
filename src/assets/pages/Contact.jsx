@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import PageHero from "../components/PageHero/PageHero";
 import { supabase } from "../../lib/supabaseClient";
 import "./Contact.css";
@@ -106,6 +106,22 @@ function Contact() {
 
                     </div>
                   </div>
+
+                  <div className="social-links mt-4">
+                    <a href="#" className="social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                      <FaFacebookF />
+                    </a>
+                    <a href="https://instagram.com/bgmoverseasconsultancy" className="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                      <FaInstagram />
+                    </a>
+                    <a href="https://wa.me/919490996326" className="social-icon" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                      <FaWhatsapp />
+                    </a>
+                    <a href="mailto:bgmoverseasconsultancy@gmail.com" className="social-icon" aria-label="Email">
+                      <FaEnvelope />
+                    </a>
+                  </div>
+
                   <ul className="contact-list list-unstyled mt-4">
                     <li>
                       <FaPhoneAlt className="contact-list-icon" /> <strong>Phone:</strong> +91 94909 96326
