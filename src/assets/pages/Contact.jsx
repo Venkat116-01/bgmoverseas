@@ -11,6 +11,16 @@ const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+const COUNTRY_CODES = [
+  { code: "+91", label: "+91 (India)" },
+  { code: "+1", label: "+1 (US/Canada)" },
+  { code: "+44", label: "+44 (UK)" },
+  { code: "+61", label: "+61 (Australia)" },
+  { code: "+971", label: "+971 (UAE)" },
+  { code: "+65", label: "+65 (Singapore)" },
+  { code: "+49", label: "+49 (Germany)" },
+];
+
 function Contact() {
   const [serverMessage, setServerMessage] = useState("");
   const {
@@ -18,9 +28,11 @@ function Contact() {
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm();
+  } = useForm({ defaultValues: { countryCode: "+91" } });
 
   const onSubmit = async (data) => {
+    const phone = `${data.countryCode} ${data.phone}`;
+
     const [emailResult, dbResult] = await Promise.allSettled([
       emailjs.send(
         SERVICE_ID,
@@ -28,6 +40,7 @@ function Contact() {
         {
           from_name: data.name,
           from_email: data.email,
+          phone,
           subject: data.subject,
           message: data.message,
         },
@@ -37,6 +50,7 @@ function Contact() {
         ? supabase.from("contact_submissions").insert({
             name: data.name,
             email: data.email,
+            phone,
             subject: data.subject,
             message: data.message,
           })
@@ -138,12 +152,47 @@ function Contact() {
                     </div>
 
                     <div className="mb-3">
-                      <label htmlFor="subject" className="form-label">Subject</label>
-                      <input
+                      <label htmlFor="phone" className="form-label">Mobile Number</label>
+                      <div className="input-group">
+                        <select
+                          id="countryCode"
+                          className="form-select flex-grow-0 w-auto"
+                          {...register("countryCode", { required: true })}
+                        >
+                          {COUNTRY_CODES.map((c) => (
+                            <option key={c.code} value={c.code}>{c.label}</option>
+                          ))}
+                        </select>
+                        <input
+                          id="phone"
+                          type="tel"
+                          inputMode="numeric"
+                          className={`form-control ${errors.phone ? "is-invalid" : ""}`}
+                          placeholder="XXXXX XXXXX"
+                          {...register("phone", {
+                            required: "Mobile number is required",
+                            pattern: { value: /^[0-9\s-]{6,15}$/, message: "Enter a valid mobile number" },
+                          })}
+                        />
+                        {errors.phone && <div className="invalid-feedback">{errors.phone.message}</div>}
+                      </div>
+                    </div>
+
+                    <div className="mb-3">
+                      <label htmlFor="subject" className="form-label">Country</label>
+                      <select
                         id="subject"
-                        className={`form-control ${errors.subject ? "is-invalid" : ""}`}
-                        {...register("subject", { required: "Subject is required" })}
-                      />
+                        className={`form-select ${errors.subject ? "is-invalid" : ""}`}
+                        defaultValue=""
+                        {...register("subject", { required: "Please select a country" })}
+                      >
+                        <option value="" disabled>Select a country</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Germany">Germany</option>
+                      </select>
                       {errors.subject && <div className="invalid-feedback">{errors.subject.message}</div>}
                     </div>
 
