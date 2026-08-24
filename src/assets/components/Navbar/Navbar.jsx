@@ -56,8 +56,6 @@ function Navbar() {
               </Link>
             </li>
 
-
-
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -68,46 +66,26 @@ function Navbar() {
                 Countries
               </a>
               <ul className="dropdown-menu">
-              <li>
-  <Link
-    className="dropdown-item"
-    to="/study/usa"
-    onClick={handleNavLinkClick}
-  >
-    USA
-  </Link>
-</li>
-<li>
- <Link
-    className="dropdown-item"
-    to="/study/uk"
-    onClick={handleNavLinkClick}
-  >
-    UK
-  </Link>
-</li>
-<li>
- <Link
-    className="dropdown-item"
-    to="/study/Australia"
-    onClick={handleNavLinkClick}
-  >
-    Australia
-  </Link>
-</li>
-<li>
- <Link
-    className="dropdown-item"
-    to="/study/Canada"
-    onClick={handleNavLinkClick}
-  >
-    Canada
-  </Link>
-</li>
-                
-          
-                   
-         
+                <li>
+                  <Link className="dropdown-item" to="/study/usa" onClick={handleNavLinkClick}>
+                    USA
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/study/uk" onClick={handleNavLinkClick}>
+                    UK
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/study/australia" onClick={handleNavLinkClick}>
+                    Australia
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/study/canada" onClick={handleNavLinkClick}>
+                    Canada
+                  </Link>
+                </li>
               </ul>
             </li>
 

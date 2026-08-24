@@ -1,0 +1,93 @@
+/* Shared hero used by every inner page. One canonical dark scrim under a
+   photo background guarantees the title/breadcrumb stay legible regardless
+   of how bright the underlying photo is. */
+
+.page-hero {
+  position: relative;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: page-hero-zoom 12s infinite alternate;
+}
+
+@keyframes page-hero-zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(8, 24, 63, 0.72), rgba(8, 24, 63, 0.5));
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 0;
+  animation: page-hero-fade-down 0.8s ease;
+}
+
+@keyframes page-hero-fade-down {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-hero-title {
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin: 0 0 0.75rem;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+  animation: page-hero-title-in 1s ease;
+}
+
+@keyframes page-hero-title-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-hero .breadcrumb {
+  --bs-breadcrumb-divider: '>';
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0;
+  background: transparent;
+}
+
+.page-hero .breadcrumb-item a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.page-hero .breadcrumb-item a:hover {
+  color: #ffffff;
+}
+
+.page-hero .breadcrumb-item.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.page-hero .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 992px) {
+  .page-hero { min-height: 300px; }
+}
+
+@media (max-width: 768px) {
+  .page-hero { min-height: 240px; }
+  .page-hero-title { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+}

@@ -1,12 +1,29 @@
 .footer {
+  position: relative;
   background-color: #101827;
   color: #dfe3ea;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, #F2B419 0%, #FF8A3D 100%) 1;
 }
 
-.footer h5 {
+.footer-heading {
+  position: relative;
   color: #ffffff;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
   font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.footer-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 42px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #F2B419 0%, #FF8A3D 100%);
 }
 
 .footer-text {
@@ -21,26 +38,78 @@
   list-style: none;
 }
 
-.footer-links li,
+.footer-links li {
+  margin-bottom: 0.85rem;
+}
+
 .footer-contacts li {
-  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+  color: #f5f7fb;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.footer-contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(242, 180, 25, 0.14);
+  color: #F2B419;
+  font-size: 0.9rem;
+  margin-top: 0.1rem;
 }
 
 .footer-link {
+  display: inline-flex;
+  align-items: center;
   color: #cfd8e6;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-link::before {
+  content: "\203A";
+  margin-right: 0.5rem;
+  color: #F2B419;
+  font-weight: 700;
 }
 
 .footer-link:hover {
   color: #ffd54f;
   text-decoration: none;
+  transform: translateX(4px);
+}
+
+.footer-col-divider {
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  padding-left: 2.5rem;
 }
 
 .footer-bottom {
+  margin-top: 3rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 1.25rem;
+  padding-top: 1.5rem;
   color: #9aa7c4;
+  letter-spacing: 0.01em;
+}
+
+.footer-brand {
+  color: #dfe3ea;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .footer-col-divider {
+    border-left: none;
+    padding-left: 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -48,8 +117,14 @@
     text-align: center;
   }
 
+  .footer-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .footer-links,
   .footer-contacts {
     display: inline-block;
+    text-align: left;
   }
 }
