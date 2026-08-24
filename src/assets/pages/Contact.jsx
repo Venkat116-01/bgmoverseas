@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaWhatsapp, FaClock } from "react-icons/fa";
 import PageHero from "../components/PageHero/PageHero";
 import { supabase } from "../../lib/supabaseClient";
 import "./Contact.css";
@@ -107,7 +107,17 @@ function Contact() {
                     </div>
                   </div>
 
-                  <div className="social-links mt-4">
+                  <div className="contact-map">
+                    <iframe
+                      title="BGM Overseas Consultancy location"
+                      src="https://www.google.com/maps?q=Flat+No+304+Datta+Sai+Apartments+Indira+Nagar+Dilsukhnagar+Hyderabad+Telangana+500060&output=embed"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      allowFullScreen
+                    />
+                  </div>
+
+                  <div className="social-links">
                     <a href="#" className="social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                       <FaFacebookF />
                     </a>
@@ -122,9 +132,12 @@ function Contact() {
                     </a>
                   </div>
 
-                  <ul className="contact-list list-unstyled mt-4">
+                  <ul className="contact-list list-unstyled">
                     <li>
                       <FaPhoneAlt className="contact-list-icon" /> <strong>Phone:</strong> +91 94909 96326
+                    </li>
+                    <li>
+                      <FaClock className="contact-list-icon" /> <strong>Office Hours:</strong> 10:00 AM – 6:00 PM
                     </li>
                     <li>
                       <FaEnvelope className="contact-list-icon" /> <strong>Email:</strong> bgmoverseasconsultancy@gmail.com
