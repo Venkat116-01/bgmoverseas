@@ -9,6 +9,7 @@ import whyBgmBg from "../images/why-bgm-bg.jpg";
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const AUTOREPLY_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const COUNTRY_CODES = [
@@ -33,7 +34,7 @@ function Contact() {
   const onSubmit = async (data) => {
     const phone = `${data.countryCode} ${data.phone}`;
 
-    const [emailResult, dbResult] = await Promise.allSettled([
+    const [emailResult, dbResult, autoReplyResult] = await Promise.allSettled([
       emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
@@ -55,6 +56,18 @@ function Contact() {
             message: data.message,
           })
         : Promise.reject(new Error("Supabase is not configured")),
+      emailjs.send(
+        SERVICE_ID,
+        AUTOREPLY_TEMPLATE_ID,
+        {
+          from_name: data.name,
+          from_email: data.email,
+          phone,
+          subject: data.subject,
+          message: data.message,
+        },
+        PUBLIC_KEY
+      ),
     ]);
 
     if (emailResult.status === "rejected") {
@@ -62,6 +75,9 @@ function Contact() {
     }
     if (dbResult.status === "rejected") {
       console.error("Supabase insert error", dbResult.reason);
+    }
+    if (autoReplyResult.status === "rejected") {
+      console.error("Auto-reply email error", autoReplyResult.reason);
     }
 
     if (emailResult.status === "fulfilled" || dbResult.status === "fulfilled") {
