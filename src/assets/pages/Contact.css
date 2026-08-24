@@ -39,21 +39,14 @@
   background: linear-gradient(180deg, #ffffff 0%, #eef5ff 100%);
   border-radius: 1.8rem;
   padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border: 1.5px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .contact-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   box-shadow: 0 30px 65px rgba(15, 38, 95, 0.16);
-  background: linear-gradient(135deg, #f2b419 0%, #08183f 100%);
-  color: #fff;
-}
-
-.contact-card:hover .card-title,
-.contact-card:hover p,
-.contact-card:hover li,
-.contact-card:hover label {
-  color: #fff;
+  border-color: var(--color-accent, #f2b419);
 }
 
 .contact-card-top {
