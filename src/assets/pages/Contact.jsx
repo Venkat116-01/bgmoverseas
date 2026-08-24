@@ -96,7 +96,7 @@ function Contact() {
           </div>
 
           <div className="row g-4">
-            <div className="row-lg-6">
+            <div className="col-lg-6">
               <div className="card contact-card shadow-sm h-100">
                 <div className="card-body">
                   <div className="contact-card-top">
