@@ -1,8 +1,22 @@
 import { Link } from "react-router-dom";
 import PageHero from "../PageHero/PageHero";
 import heroImg from "../../images/image2.jpg";
-import contentImg from "../../images/image4.jpg";
 import "../../pages/StudyPages.css";
+
+const CANADA_UNIVERSITIES = [
+  { name: "University of Toronto", url: "https://www.utoronto.ca" },
+  { name: "University of British Columbia", url: "https://www.ubc.ca" },
+  { name: "McGill University", url: "https://www.mcgill.ca" },
+  { name: "University of Waterloo", url: "https://www.uwaterloo.ca" },
+  { name: "Simon Fraser University", url: "https://www.sfu.ca" },
+  { name: "York University", url: "https://www.yorku.ca" },
+  { name: "University of Ottawa", url: "https://www.uottawa.ca" },
+  { name: "Conestoga College", url: "https://www.conestogac.on.ca" },
+  { name: "Seneca Polytechnic", url: "https://www.senecapolytechnic.ca" },
+  { name: "Centennial College", url: "https://www.centennialcollege.ca" },
+  { name: "Humber College", url: "https://www.humber.ca" },
+  { name: "McMaster University", url: "https://www.mcmaster.ca" },
+];
 
 export default function StudyInCanada() {
   return (
@@ -13,7 +27,147 @@ export default function StudyInCanada() {
         crumbs={[{ label: "Home", to: "/" }, { label: "Study in Canada" }]}
       />
 
-      <section className="mt-5 container">
+      <section className="study-layout container py-5">
+        <div className="row g-4">
+          <aside className="col-lg-3">
+            <div className="study-sidebar card shadow-sm">
+              <ul className="study-list list-unstyled">
+                <li><Link to="/study/usa" className="study-link">Study in USA</Link></li>
+                <li><Link to="/study/uk" className="study-link">Study in UK</Link></li>
+                <li><Link to="/study/australia" className="study-link">Study in Australia</Link></li>
+                <li><Link to="/study/canada" className="study-link active">Study in Canada</Link></li>
+              </ul>
+            </div>
+          </aside>
+
+          <main className="col-lg-9">
+            <div className="study-content">
+              <h2 className="study-section-title">Universities</h2>
+              <div className="study-partners-grid mb-5">
+                {CANADA_UNIVERSITIES.map((u) => (
+                  <a
+                    key={u.name}
+                    href={u.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="study-partner-card"
+                  >
+                    {u.name}
+                  </a>
+                ))}
+              </div>
+
+              <div className="study-tab-card card p-4 shadow-sm">
+                <ul className="nav nav-pills mb-4 justify-content-center" id="studyTab" role="tablist">
+                  <li className="nav-item" role="presentation">
+                    <button className="nav-link active" id="career-tab" data-bs-toggle="pill" data-bs-target="#career" type="button" role="tab" aria-controls="career" aria-selected="true">
+                      Career Opportunities
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button className="nav-link" id="visa-tab" data-bs-toggle="pill" data-bs-target="#visa" type="button" role="tab" aria-controls="visa" aria-selected="false">
+                      Visa & More
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button className="nav-link" id="fees-tab" data-bs-toggle="pill" data-bs-target="#fees" type="button" role="tab" aria-controls="fees" aria-selected="false">
+                      Fees & Finances
+                    </button>
+                  </li>
+                </ul>
+
+                <div className="tab-content" id="studyTabContent">
+                  <div className="tab-pane fade show active" id="career" role="tabpanel" aria-labelledby="career-tab">
+                    <h4>Career Opportunities</h4>
+                    <p>
+                      The course you choose shapes the roles you become eligible for.
+                      A few common course-to-career pathways our students follow:
+                    </p>
+                    <ul>
+                      <li>MEng Computer Engineering → Software Developer</li>
+                      <li>MBA → Business Consultant</li>
+                      <li>MSc Data Science → Data Analyst</li>
+                      <li>Postgrad Diploma, Supply Chain Management → Logistics Coordinator</li>
+                      <li>MEng Civil Engineering → Structural Engineer</li>
+                      <li>MHSc Health Informatics → Clinical Data Analyst</li>
+                      <li>Postgrad Diploma, Digital Marketing → Marketing Analyst</li>
+                      <li>MSc Cyber Security → Security Analyst</li>
+                      <li>MN Nursing → Registered Nurse</li>
+                      <li>MEng Mechanical Engineering → Manufacturing Engineer</li>
+                    </ul>
+                  </div>
+
+                  <div className="tab-pane fade" id="visa" role="tabpanel" aria-labelledby="visa-tab">
+                    <h4>Visa & More</h4>
+                    <p>
+                      We prepare you for every step of the Canadian study permit application.
+                    </p>
+                    <p className="mb-1"><strong>Core documents:</strong></p>
+                    <ul>
+                      <li>Valid passport</li>
+                      <li>Letter of acceptance from a Designated Learning Institution (DLI)</li>
+                      <li>Proof of funds (or a GIC + first-year tuition receipt under the SDS stream)</li>
+                      <li>IELTS/CELPIP/TEF score meeting the university's requirement</li>
+                      <li>Statement of purpose explaining your study plan</li>
+                    </ul>
+                    <p className="mb-1 mt-3"><strong>Academic documents (originals):</strong></p>
+                    <ul>
+                      <li>10th & 12th grade mark sheets</li>
+                      <li>Degree transcripts and certificates</li>
+                      <li>Work experience letters, if any</li>
+                    </ul>
+                    <p className="mb-1 mt-3"><strong>Financial documents:</strong></p>
+                    <ul>
+                      <li>GIC certificate (typically CAD 10,000-20,000) or sponsor's bank statements</li>
+                      <li>Sponsor's income proof and, where used, education loan sanction letter</li>
+                      <li>Scholarship or funding letter, if applicable</li>
+                    </ul>
+                    <p className="mt-3">
+                      After submitting your application you'll also complete biometrics and,
+                      if requested, a medical examination.
+                    </p>
+                  </div>
+
+                  <div className="tab-pane fade" id="fees" role="tabpanel" aria-labelledby="fees-tab">
+                    <h4>Fees & Finances</h4>
+                    <ol className="ps-3">
+                      <li>Application Fees: CAD 0 – CAD 150 per university</li>
+                      <li>
+                        Tuition Fees:
+                        <ul>
+                          <li>Undergraduate: CAD 15,000 – CAD 35,000 / year</li>
+                          <li>Postgraduate: CAD 15,000 – CAD 30,000 / year</li>
+                        </ul>
+                      </li>
+                      <li>Living Expenses: CAD 10,000 – CAD 15,000 / year</li>
+                      <li>
+                        Exam Fees:
+                        <ul>
+                          <li>IELTS: INR 19,000</li>
+                          <li>TOEFL: INR 18,000</li>
+                          <li>PTE: INR 18,900</li>
+                          <li>Duolingo: $59 – $70</li>
+                        </ul>
+                      </li>
+                      <li>Score Reporting: Free for 5 universities, INR 250 per additional report</li>
+                      <li>Scholarships & Grants: CAD 1,000 – 50% tuition, depending on the institution</li>
+                      <li>
+                        Visa Charges:
+                        <ul>
+                          <li>Study permit application fee: ~CAD 150</li>
+                          <li>Biometrics fee: ~CAD 85</li>
+                          <li>GIC (SDS stream): ~CAD 10,000 – 20,635</li>
+                        </ul>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </section>
+      <section className="mt-5 mb-5 container">
         <h2 className="study-section-title mb-4">Why Study in Canada?</h2>
 
         <p className="mb-4">
@@ -134,151 +288,14 @@ export default function StudyInCanada() {
             dream of studying in Canada into reality.
           </p>
         </div>
-      </section>
 
-      <section className="study-layout container py-5">
-        <div className="row g-4">
-          <aside className="col-lg-4">
-            <div className="study-sidebar card p-4 shadow-sm">
-              <h3 className="mb-3">Study</h3>
-              <ul className="study-list list-unstyled">
-                <li><Link to="/study/usa" className="study-link">Study in USA</Link></li>
-                <li><Link to="/study/uk" className="study-link">Study in UK</Link></li>
-                <li><Link to="/study/australia" className="study-link">Study in Australia</Link></li>
-                <li><Link to="/study/canada" className="study-link active">Study in Canada</Link></li>
-              </ul>
-            </div>
-          </aside>
-
-          <main className="col-lg-8">
-            <div className="study-hero-image mb-4">
-              <img src={contentImg} alt="Study in Canada" className="img-fluid rounded-3 shadow-sm" />
-            </div>
-
-            <div className="study-content">
-              <h2 className="study-section-title">Universities</h2>
-              <div className="study-partners-grid mb-5">
-                <div className="study-partner-card">University of Toronto</div>
-                <div className="study-partner-card">University of British Columbia</div>
-                <div className="study-partner-card">McGill University</div>
-                <div className="study-partner-card">University of Waterloo</div>
-                <div className="study-partner-card">Simon Fraser University</div>
-                <div className="study-partner-card">York University</div>
-                <div className="study-partner-card">University of Ottawa</div>
-                <div className="study-partner-card">Conestoga College</div>
-                <div className="study-partner-card">Seneca Polytechnic</div>
-                <div className="study-partner-card">Centennial College</div>
-                <div className="study-partner-card">Humber College</div>
-                <div className="study-partner-card">McMaster University</div>
-              </div>
-
-              <div className="study-tab-card card p-4 shadow-sm">
-                <ul className="nav nav-pills mb-4 justify-content-center" id="studyTab" role="tablist">
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link active" id="universities-tab" data-bs-toggle="pill" data-bs-target="#universities" type="button" role="tab" aria-controls="universities" aria-selected="true">
-                      Universities & Courses
-                    </button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="career-tab" data-bs-toggle="pill" data-bs-target="#career" type="button" role="tab" aria-controls="career" aria-selected="false">
-                      Career Opportunities
-                    </button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="visa-tab" data-bs-toggle="pill" data-bs-target="#visa" type="button" role="tab" aria-controls="visa" aria-selected="false">
-                      Visa & More
-                    </button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="fees-tab" data-bs-toggle="pill" data-bs-target="#fees" type="button" role="tab" aria-controls="fees" aria-selected="false">
-                      Fees & Finances
-                    </button>
-                  </li>
-                </ul>
-
-                <div className="tab-content" id="studyTabContent">
-                  <div className="tab-pane fade show active" id="universities" role="tabpanel" aria-labelledby="universities-tab">
-                    <h4>Top Programs in Canada</h4>
-                    <p>
-                      Study across business, engineering, health sciences, IT,
-                      hospitality, and the arts at Canadian universities and colleges
-                      known for co-op programs and strong graduate outcomes.
-                    </p>
-                    <ul>
-                      <li>Business Administration & Management</li>
-                      <li>Computer Science & Data Analytics</li>
-                      <li>Engineering (Mechanical, Civil, Electrical)</li>
-                      <li>Healthcare & Nursing Programs</li>
-                      <li>Hospitality Management & Tourism</li>
-                    </ul>
-                  </div>
-
-                  <div className="tab-pane fade" id="career" role="tabpanel" aria-labelledby="career-tab">
-                    <h4>Career Opportunities</h4>
-                    <p>
-                      Canada offers strong co-op placements, internships, and
-                      post-study work options. We support your professional profile,
-                      resume guidance, and employer-facing application strategy.
-                    </p>
-                    <ul>
-                      <li>Co-op placements and campus recruiting</li>
-                      <li>PGWP work authorization support</li>
-                      <li>Networking and career mentoring</li>
-                      <li>Graduate employment pathways in finance, tech, and health</li>
-                    </ul>
-                  </div>
-
-                  <div className="tab-pane fade" id="visa" role="tabpanel" aria-labelledby="visa-tab">
-                    <h4>Visa & More</h4>
-                    <p>
-                      We help you prepare all visa documents, application forms,
-                      interview coaching, and travel planning so your study journey
-                      is smooth and stress-free.
-                    </p>
-                    <ul>
-                      <li>Study permit application support</li>
-                      <li>Letter of acceptance and visa interview guidance</li>
-                      <li>Document checklist and pre-departure planning</li>
-                      <li>Travel insurance and accommodation advice</li>
-                    </ul>
-                  </div>
-
-                  <div className="tab-pane fade" id="fees" role="tabpanel" aria-labelledby="fees-tab">
-                    <h4>Fees & Finances</h4>
-                    <ol className="ps-3">
-                      <li>Application Fees: CAD 0 – CAD 150 per university</li>
-                      <li>
-                        Tuition Fees:
-                        <ul>
-                          <li>Undergraduate: CAD 15,000 – CAD 35,000 / year</li>
-                          <li>Postgraduate: CAD 15,000 – CAD 30,000 / year</li>
-                        </ul>
-                      </li>
-                      <li>Living Expenses: CAD 10,000 – CAD 15,000 / year</li>
-                      <li>
-                        Exam Fees:
-                        <ul>
-                          <li>IELTS: INR 19,000</li>
-                          <li>TOEFL: INR 18,000</li>
-                          <li>PTE: INR 18,900</li>
-                          <li>Duolingo: $59 – $70</li>
-                        </ul>
-                      </li>
-                      <li>Score Reporting: Free for 5 universities, INR 250 per additional report</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-
-              <div className="text-center mt-4">
-                <Link to="/contact" className="btn btn-cta">
-                  Contact Us for Canada Admission
-                </Link>
-              </div>
-            </div>
-          </main>
+        <div className="text-center mt-4">
+          <Link to="/contact" className="btn btn-cta">
+            Contact Us for Canada Admission
+          </Link>
         </div>
       </section>
+
     </>
   );
 }

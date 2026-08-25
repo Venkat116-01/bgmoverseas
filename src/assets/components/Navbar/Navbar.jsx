@@ -91,13 +91,13 @@ function Navbar() {
 
             <li className="nav-item">
               <Link className="nav-link" to="/why-bgm-overseas" onClick={handleNavLinkClick}>
-                Why BGM Overseas
+                Why BGM
               </Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" to="/our-team" onClick={handleNavLinkClick}>
-                Our Team
+              Team
               </Link>
             </li>
 
