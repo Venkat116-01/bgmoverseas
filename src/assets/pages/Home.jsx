@@ -13,6 +13,7 @@ import usaMitHero from "../images/usa-mit-hero.jpg";
 import usaMitCard from "../images/usa-mit-card.jpg";
 import usaHarvardCard from "../images/usa-harvard-card.jpg";
 import usaStanfordCard from "../images/usa-stanford-card.jpg";
+
 import "./Home.css";
 
 
@@ -36,6 +37,7 @@ function Home() {
                   </Link>
                 </div>
                 <div className="hero-image-panel">
+
                   <img src={new6} alt="Students exploring global study opportunities" />
                 </div>
               </div>
