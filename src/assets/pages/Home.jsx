@@ -303,9 +303,6 @@ function Home() {
             </div>
           </div>
 
-          <p className="university-photo-credit text-center mt-4 mb-0">
-            Campus photography via Wikimedia Commons contributors, licensed CC BY-SA.
-          </p>
         </div>
       </section>
 
